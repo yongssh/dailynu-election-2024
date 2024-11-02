@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-const FederalElectionResults = () => {
+const CookCountyElectionResults = () => {
  
 
     return (
         <section>
-            <h2>Federal Election Results</h2>
+            <h2>Cook County</h2>
            
         </section>
         
     );
 };
 
-export default FederalElectionResults;
+export default CookCountyElectionResults;

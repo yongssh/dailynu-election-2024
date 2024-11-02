@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => (
     
     <header>
-        <h1>2024 Election</h1>
+        <h1>Elections 2024</h1>
     </header>
 );
 

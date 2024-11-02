@@ -1,23 +1,31 @@
 import React from 'react';
 import Header from './components/Header';
-import FederalElectionResults from './components/FederalElection';
-import RelatedCoverage from './components/RelatedCoverage';
+import PresidentialElectionResults from './components/PresidentialElectionResults';
 import DailyLogo from './components/DailyLogo';
-import TwitterFeed from './components/TwitterFeed'; // Adjust the path as necessary
+import TwitterFeed from './components/TwitterFeed';
 import FederalElectionCarousel from './components/FederalElectionCarousel';
+import HorizontalDivider from './components/HorizontalDivider'
+import CongressionalElectionResults from './components/CongressionalElectionResults';
+import ReferendumElectionResults from './components/ReferendumElectionResults';
+import StateElectionResults from './components/StateElectionResults';
+import CookCountyElectionResults from './components/CookCountyElectionResults';
 
-//import DataVisualization from './components/DataVisualization';
+// styling
 import './App.css';
-
 
 function App() {
     return (
         <div className="App">
             <DailyLogo/>
             <Header />
-            <FederalElectionResults />
+            
+            <PresidentialElectionResults />
+            <CongressionalElectionResults/>
             <FederalElectionCarousel />
-            <RelatedCoverage />
+            <HorizontalDivider/>
+            <CookCountyElectionResults />
+            <StateElectionResults />
+            <ReferendumElectionResults />
             <TwitterFeed />
         </div>
     );

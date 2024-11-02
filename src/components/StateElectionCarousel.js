@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel, Box, Card } from "@washingtonpost/wpds-ui-kit";
 
-export default function FederalElectionCarousel() {
+export default function StateElectionCarousel() {
     const items = [
         {
             imageUrl: "/JONES_Nineth_CMYK-1200x800.jpg",
@@ -27,7 +27,7 @@ export default function FederalElectionCarousel() {
           <Carousel.Header>
             <Carousel.HeaderContent>
               <Carousel.Title className="carousel-title">
-                Federal Election Coverage
+                State Election Coverage
               </Carousel.Title>
             </Carousel.HeaderContent>
 
