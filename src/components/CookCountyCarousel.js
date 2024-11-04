@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel, Box, Card } from "@washingtonpost/wpds-ui-kit";
 import "../App.css"; 
 
-export default function FederalElectionCarousel() {
+export default function CookCountyCarousel() {
     const items = [
         {
             imageUrl: "/article-photos/JONES_Nineth_CMYK-1200x800.jpg",
@@ -27,7 +27,7 @@ export default function FederalElectionCarousel() {
           <Carousel.Header>
             <Carousel.HeaderContent>
               <Carousel.Title className="carousel-title">
-                Federal Election Coverage
+                Cook County Coverage
               </Carousel.Title>
             </Carousel.HeaderContent>
 

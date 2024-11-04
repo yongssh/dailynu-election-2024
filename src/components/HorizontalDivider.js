@@ -6,6 +6,7 @@ export default function HorizontalDivider() {
       <Box
         css={{
           width: "100%",
+          margin: "0px"
         }}
       >
         <Box

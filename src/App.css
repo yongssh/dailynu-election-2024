@@ -1,51 +1,132 @@
+/* General Styles */
 body {
   font-family: Georgia, serif;
   color: #501e4c;
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;
+  font-size: 1rem;
 }
 
+/* App Container */
 .App {
+  /* zoom: 75%; FIXED bc i made this on 67% zoom on accident */
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.introduction-container{
+  
+  display: "flex";
+  width: "100%";
+  max-width: "500px";
+  row-gap: "20px";
+  flex-direction: "column";
+  margin: "10 auto" ;
+
+  overflow-y:auto
+  
 
 }
+/* Header Styles */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
 header {
   background-color: #501e4c; 
   color: white;
-  padding: 20px;
+  padding: 10px;
   margin-top: 50px;
   text-align: center;
+  font-size: 1rem;
 }
 
 header h1 {
   margin: 0;
 }
-
-/* header {
-  margin-top: 30px;
-  text-align: center;
-  margin-bottom: 20px;
+.header-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-} */
-
-.daily-logo{
-  width: 500px;
+  padding: 10px 20px; /* Ensure there’s enough padding */
+  background-color: #501e4c; /* Ensure background matches your design */
+  color: white; /* Header text color */
 }
-.daily-logo-link{
+
+.sidebar-toggle {
+  display: none; /* Hidden by default, show on mobile */
+  background-color: #501e4c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.center-top-components{
+  display: flex;
+  justify-content: center; /* Centers the link horizontally */
+  align-items: center;
+}
+/* Daily Logo Styles */
+.daily-logo {
+  width: fit-content; /* Use percentage for responsiveness */
+  max-width: 500px; /* Ensure it doesn't exceed a specific size */
+}
+
+.daily-logo-link {
   display: flex;           
   flex-direction: column;   
   justify-content: center; 
   align-items: center;     
   margin-top: 30px;        
+}
+.centered-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  width: 100%;             /* Full width to ensure horizontal centering */
+}
+.coverage-link {
+  font-size: 18px;
+  padding: 8px 8px;
+  border: 2px solid #FFFFFF;
+  margin-top: 25px;
+  color: #501e4c;
+  border-radius: 4px;      
+  text-align: center;
+  text-decoration: underline;
+
+  display: inline-block;   
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed; /* Fix the sidebar */
+  top: 180px; /* Below the fixed header */
+  left: 0; /* Align to the left */
+  width: 20%; /* Fixed width for sidebar */
+  height: fit-content;
+  /* height: calc(100vh - 60px) * 67%; Full height minus header height */
+  background-color: #501e4c; /* Background color */
+  padding: 20px; /* Padding inside the sidebar */
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  z-index: 999; /* Ensure it's below the header */
+}
+
+/* Main Content Styles */
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space out children */
 }
 
 section {
@@ -53,43 +134,425 @@ section {
   padding: 15px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 5px #5a4c58;
+  scroll-margin-top: 170px;
 }
 
+.main-content {
+  /* position: fixed;
+  top: 200;
+  left: 0;
+  right: 0; */
+  background-color: #FAFAFA;
+  padding-top: 150px; 
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25%; 
+  flex: 1; 
+  overflow: hidden;
+}
+
+/* Title Styles */
 h2 {
   border-bottom: 2px solid #501e4c;
   padding-bottom: 10px;
 }
 
-.carousel-title{
-  color:#501e4c;
+.carousel-title {
+  color: #501e4c;
 }
 
-.carousel-container{
-  width:100%;
+/* Presidential Section Styles */
+
+.election-section {
+  display: flex;
+  flex-wrap: wrap; /* Allows components to wrap when screen is narrow */
+  flex-direction: row; /* Keeps child components in a row on larger screens */
+  justify-content: space-between;
+  align-items: start;
+  /* gap: 20px; Positive gap for spacing between components */
+  margin: 0 0;
+
 }
 
-.presidential-dataviz-container{
-  margin-left: 50px;
-  align-content: center;
+.dataviz-container {
+  margin-top: 0; /* Ensure no top margin */
+  padding-top: 0; /* Ensure no top padding */
+  flex-grow: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  width: 40%;
+  height: 100%;
+  margin-right: 20px;
+  
 }
-.twitter-container{
-  align-content: center;
+
+.presidential-dataviz{
+  border: "none";
+  width: "800px"; 
+  height: "138px";
+
+
+  /* padding-bottom: 10px; */
+}
+
+.congressional-dataviz{
+  border: "none";
+  width: "800px"; 
+  height: "138px";
+
+
+}
+/* Carousel Container Styles */
+.carousel-container {
+  /* margin-top: 3.75%; */
+  padding-top: 19px;
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  max-width: 800px; /* Set a max width for consistency */
+}
+
+
+/* Twitter Feed Styles */
+.twitter-container {
+  max-height: calc((100vh - 100px) * 0.67); /* Adjusts to 67% of the viewport height minus 100px */
+  overflow-y: auto; /* Allows scrolling if the content exceeds max height */
+  margin-bottom: 20px; /* Adds spacing below */
+  width: 100%; /* Ensures it doesn’t exceed the container’s width */
+  box-sizing: border-box; /* Prevents overflow due to padding or borders */
+}
+
+.twitter-timeline {
+  width: 100%; /* Stretches to fit container width */
+  max-height: inherit; /* Inherits the max-height from the container */
+}
+
+
+/* Ballot Explainer Styles */
+.ballot-explainer {
+  color: #501e4c;
+  font-weight: bold;
+}
+
+/* Carousel Card Styles */
+.carousel-card {
+  width: 300px;
+  height: 400px;
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 16px;
+}
+
+.carousel-card-category {
+  font-weight: bold;
+  font-size: 0.875rem; /* Approx $0.75 */
+  margin: 0 0 8px;
+}
+
+.carousel-card-title {
+  font-size: 1.5rem; /* Approx $1.50 */
+  margin: 0 0 16px;
+}
+
+.carousel-card-author {
+  color: #501e4c; /* Accessible color */
+  font-size: 1rem; /* Approx $0.87 */
+  text-decoration: none;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  justify-items: center;
+  gap: 40px; /* Space out menu items */
+  height: auto;
+  font-family: Georgia, serif;
+  color: #ffffff;
+  background-color: #501e4c;
+  border-bottom: 2px solid #FAFAFA;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thin gray shadow */
 }
-.twitter-timeline{
-  align-content: center;
+
+/* Menu Trigger Styles */
+.menu-trigger {
+  font-size: 1.0rem; /* Make the font size larger */
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+  line-height: 1.5; 
+  padding: 8px 12px;
+  cursor: pointer;
+  position: relative; /* Allow positioning for the pseudo-element */
+}
+
+.menu-trigger::after {
+  content: ''; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.5px solid transparent; /* Initial border to prevent layout shift */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.menu-trigger:hover::after {
+  border-color: white; /* Change border color on hover */
+}
+
+
+/* Dropdown Styles */
+.dropdown {
   display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
+  color: #501e4c;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-link {
+  font-size: 1.0rem;
+  font-family: Georgia, serif;
+  color: #501e4c;
+  line-height: 1.5; 
+  padding: 10px 15px; 
+  text-align: center; 
+}
+
+.navigation-menu-sub {
+  position: relative; 
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
+}
+
+/* Button Styles */
+.outlined-button {
+  background-color: transparent; /* Remove the background color */
+  font-family: Georgia, serif;
+  border: 2px solid white; /* Add a white border */
+  color: white; /* Set text color to white */
+  padding: 8px 16px; /* Adjust padding as necessary */
+  transition: background-color 0.3s, color 0.3s; /* Optional: Add transitions for hover effects */
+}
+
+.outlined-button:hover {
+  background-color: white; 
+  color: black; 
+}
+
+.footer {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background-color: #FAFAFA; 
+  padding: 20px; 
+  color: #501e4c; 
+  position: relative; 
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  
+  :root {
+    --main-bg-color: #FFFF;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.App{
+  zoom: 100%; 
+}
+  .fixed-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    /* gap: 5px; */
+    font-size: 10px;
+    /* padding: 0.5rem 0.5rem;  */
+    width: fit-content; 
+    /* margin: 20px auto; */
+    top: 0px;
+    position:fixed;
+    /* align-self: center; */
+    /* display: flex; */
+    /* flex-wrap: wrap; Allow items to wrap on small screens */
+    /* flex-direction: row;  */
+    /* padding: 0.5rem; Padding for the header */
+    /* justify-content: space-between; Space items evenly */
+    /* align-items: center; Center items vertically */
+  }
+  .daily-logo{
+    width: 50%;
+    align-self: center;
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding-top: 150px; 
+    top: 150px;/* Offset for the mobile sidebar height */
+  }
+
+  .presidential-section {
+    flex-direction: column; /* Stack elements vertically on mobile */
+  }
+
+  .sidebar {
+     /* Hide sidebar by default */
+    display: none; 
+    font-size: 0.5rem; /* Further reduce font size on smaller screens */
+    padding: 0.25rem; /* Reduce padding */
+  
+
+  }
+
+  .sidebar-toggle {
+    display: block; /* Show the toggle button on mobile */
+    position: fixed; 
+    top: 100px; /* Adjust as needed */
+    left: 0; 
+    z-index: 1000; 
+    background-color: #501e4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  /* .sidebar-toggle {
+    display: block; 
+    margin-bottom: 10px; 
+  } */
+
+  .header-container {
+    font-size: 10px;
+    flex: 1; /* Allow items to grow and fill available space */
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap; /* Enables wrapping to the next line */
+    gap: 10px; /* Optional: adds spacing between items */
+    /* margin: 0px; */
+  }
+  .navigation-menu{
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap if they overflow */
+  gap: 10px; /* Control space between each button */
+  font-size: 10px; /* Smaller font if needed */
+  overflow: hidden; /* Prevents overflowing content */
+  }
+  .menu-trigger, .menu-link {
+    font-size: 0.8rem;
+    padding: 4px 8px; /* Control button padding */
+    margin: 0; /* Remove any default margin */
+    flex: 1; /* Allow items to grow and fill space */
+    display: flex;
+    flex-direction: wrap;
+    width: 100%; /* Full width for each menu item */
+    text-align: center; /* Center align text */
+    
+  }
+
+  .broad-topic-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    gap: 5px;
+    padding: 0.5rem 0.5rem; 
+    width: 90%; 
+    margin: 20px auto;
+    top: 150px;
+    position:fixed;
+    align-self: center;
+}
+  .broad-topic-container button {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: var(--body-font);
+}
+
+  .coverage-link{
+    font-size: "10px";
+    padding: "4px 8px";
+    align-self: center;
+    justify-self: center;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+    
+  }
+  /* Adjust button for better fit */
+  Button {
+    width: 100%; /* Make button full width */
+    margin-top: 10px; /* Space above button */
+  }
+
+  .content {
+    margin-left: 0; /* No left margin on mobile */
+  }
+
+  .twitter-container {
+    max-height: 300px; /* Set a smaller max height for mobile */
+  }
+
+  /* Daily Logo adjustments */
+  .daily-logo {
+    width: 80%;
+    max-width: 300px; /* Adjust max width */
+  }
+
+  header {
+    padding: 10px; /* Reduce header padding */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding-bottom: 8px;
+  }
+
+  .presidential-dataviz, .congressional-dataviz {
+    height: 200px; /* Adjust height for mobile */
+  }
+
+  .carousel-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .carousel-card {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Optional max width */
+  }
+
+  .twitter-timeline {
+    height: 300px; /* Set a specific height */
+    padding-bottom: 50px;
+  }
 }

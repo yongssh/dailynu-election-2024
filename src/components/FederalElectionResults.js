@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
 
 import "../App.css"
-const StateElectionResults = () => {
+const FederalElectionResults = () => {
     return (
         <section className="dataviz-container">
-            <h2>Cook County Elections </h2>
+            <h2>Federal Elections </h2>
             
-            <section id="cook-county">
+            <section id="federal">
             <div className="presidential-dataviz">
                 {/* <h3>Presidential Results</h3> */}
-               
+                
                 <iframe
                     title="Presidential Election"
                     aria-label="Split Bars"
@@ -21,7 +21,8 @@ const StateElectionResults = () => {
                     style={{border: "none", width: "400px", height: "200px" }}
                 ></iframe>            
                 </div>
-    
+        
+
             <div className="congressional-dataviz">
                 {/* <h3>Congressional Results</h3> */}
             <iframe title="US House - 7" 
@@ -35,10 +36,11 @@ const StateElectionResults = () => {
 
            </iframe>
            </div>
-        </section>
+           </section>
+          
         </section>
         
     );
 };
 
-export default StateElectionResults;
+export default FederalElectionResults;

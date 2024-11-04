@@ -15,15 +15,15 @@ const TwitterFeed = () => {
     }, []);
 
     return (
-        <div>
+        <div className="twitter-container">
             <a 
                 className="twitter-timeline" 
                 href="https://twitter.com/thedailynu?ref_src=twsrc%5Etfw" // THIS IS ONLY THE DAILY'S FEED
                 // I've added @jacob_wendler and @thedailynu to a Twitter list, but it just links instaed
                 //href="https://twitter.com/i/lists/1852491479207309735"
-                data-tweet-limit="5" // Optional: Limit the number of tweets shown
-                data-width="300"      // Optional: Set width
-                data-height="400"     // Optional: Set height
+                data-tweet-limit="10" 
+                data-width="100%"     
+                data-height="500"  // Optional: Set height
             >
                 Tweets by thedailynu
             </a>
