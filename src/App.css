@@ -476,6 +476,14 @@ h2 {
     font-size: 24px; /* Size of the close icon */
     margin-bottom: 20px; /* Space below the button */
 }
+
+.introduction {
+  padding-top: 0;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space out children */
+}
   .main-content {
       margin-left: 0; /* Reset margin for mobile */
       padding: 0.5rem; /* Adjust padding */
@@ -498,11 +506,12 @@ h2 {
 }
   
 .sidebar-close {
-  background: transparent; /* No background */
-  border: none; /* Remove border */
+  height: 50px;
+  width: 50px;
+  padding-bottom: 0px;
+  margin-bottom:0px;
   cursor: pointer; /* Pointer cursor on hover */
-  padding: 10px; /* Add some padding */
-  color: rgb(255, 255, 255); /* Set the color for the icon */
+  color: #501e4c; /* Set the color for the icon */
   position: absolute; /* Positioning */
   z-index: 11111;
   top: 10px; /* Adjust according to your layout */
