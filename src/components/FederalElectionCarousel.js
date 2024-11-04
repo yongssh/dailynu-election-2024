@@ -25,10 +25,11 @@ export default function FederalElectionCarousel() {
 
         }
     ];
-
+    const maxWidth = window.innerWidth < 768 ? "100%" : "55%";
+    const maxItemsPerPage = window.OverconstrainedError < 768? 2 : 1;
     return (
       <Box className="carousel-container">
-        <Carousel.Root style={{ maxWidth: "55%" }} itemsPerPage={2}>
+        <Carousel.Root style={{ maxWidth: maxWidth }} itemsPerPage={maxItemsPerPage}>
           {/* Carousel Header */}
           <Carousel.Header>
             <Carousel.HeaderContent>
@@ -38,7 +39,7 @@ export default function FederalElectionCarousel() {
             </Carousel.HeaderContent>
 
             {/* Previous and Next Buttons */}
-            <Carousel.HeaderActions>
+            <Carousel.HeaderActions class="carousel-header-actions">
               <Carousel.PreviousButton />
               <Carousel.NextButton />
             </Carousel.HeaderActions>

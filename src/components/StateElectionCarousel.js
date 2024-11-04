@@ -20,9 +20,11 @@ export default function StateElectionCarousel() {
         },
     ];
 
+    const maxWidth = window.innerWidth < 768 ? "100%" : "55%"; 
+    const maxItemsPerPage = window.OverconstrainedError < 768? 2 : 1;
     return (
       <Box className="carousel-container">
-      <Carousel.Root style={{ maxWidth: "58%" }} itemsPerPage={2}>
+        <Carousel.Root style={{ maxWidth: maxWidth }} itemsPerPage={maxItemsPerPage}>
           {/* Carousel Header */}
           <Carousel.Header>
             <Carousel.HeaderContent>
