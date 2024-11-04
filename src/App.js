@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react';
 import Header from './components/Header';
 import DailyLogo from './components/DailyLogo';
@@ -12,8 +13,6 @@ import ReferendumElectionResults from './components/ReferendumElectionResults';
 import ReferendumCarousel from './components/ReferendumCarousel';
 import Sidebar from './components/Sidebar';
 import './App.css';
-import { ChevronRight, ChevronLeft } from "@washingtonpost/wpds-assets";
-import { Menu } from "@washingtonpost/wpds-assets";
 
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,10 +24,7 @@ function App() {
     return (
         <div className="App">
             <div className="fixed-header">
-            <button id="toggle-sidebar" className="sidebar-toggle" onClick={toggleSidebar}>
-                    {sidebarOpen ? <ChevronLeft /> : <Menu />}
-                </button>
-                <DailyLogo />
+                <DailyLogo toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
                 <Header />
             </div>
 

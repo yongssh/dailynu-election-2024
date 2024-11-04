@@ -22,7 +22,7 @@ export default function CookCountyCarousel() {
 
     return (
       <Box className="carousel-container">
-        <Carousel.Root>
+       <Carousel.Root style={{ maxWidth: "55%" }} itemsPerPage={2}>
           {/* Carousel Header */}
           <Carousel.Header>
             <Carousel.HeaderContent>

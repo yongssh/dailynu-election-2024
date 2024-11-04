@@ -9,9 +9,9 @@ const Sidebar = ({ onClose }) => {
     return (
         <div className="sidebar active">
             {/* Button to close the sidebar */}
-            <button className="sidebar-close" onClick={onClose} aria-label="Close Menu">
-                <ChevronLeft />
-            </button>
+              <button className="sidebar-close" onClick={onClose} aria-label="Close Sidebar">
+            <ChevronLeft />
+        </button>
             <div className="introduction">
                 <Introduction />
                 <TwitterFeed />

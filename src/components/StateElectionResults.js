@@ -11,29 +11,32 @@ const StateElectionResults = () => {
             <div className="presidential-dataviz">
                 {/* <h3>Presidential Results</h3> */}
 
-                <iframe
-                    title="Presidential Election"
-                    aria-label="Split Bars"
-                    id="datawrapper-chart-XSYus"
-                    src="https://datawrapper.dwcdn.net/XSYus/4/"
-                    data-external="1"
-                    scrolling='no'
-                    style={{border: "none", width: "400px", height: "200px" }}
-                ></iframe>            
+                <iframe 
+                title="IL House 17 Election" 
+                aria-label="Bar Chart" 
+                id="datawrapper-chart-SmxdY" 
+                src="https://datawrapper.dwcdn.net/SmxdY/5/" 
+                scrolling="no" 
+                frameborder="0" 
+                className="responsive-iframe"
+                height="143" data-external="1">
+
+                </iframe>
                 </div>
     
             <div className="congressional-dataviz">
                 {/* <h3>Congressional Results</h3> */}
-            <iframe title="US House - 7" 
-            aria-label="Election Donut" 
-            id="datawrapper-chart-772Sh" 
-            src="https://datawrapper.dwcdn.net/772Sh/1/" 
-            frameborder="0" 
-            // style="width: 0; min-width: 100% !important; border: none;" 
-            height="163" 
-            data-external="1">
-
-           </iframe>
+                <iframe title="IL State House 18 Election" 
+                aria-label="Bar Chart" 
+                id="datawrapper-chart-LQziq"
+                src="https://datawrapper.dwcdn.net/LQziq/2/" 
+                scrolling="no" 
+                frameborder="0" 
+                className="responsive-iframe"
+                width="600" 
+                height="143" d
+                ata-external="1">
+                </iframe>
            </div>
            </a>
         </section>

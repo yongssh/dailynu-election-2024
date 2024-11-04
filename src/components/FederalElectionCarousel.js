@@ -18,11 +18,17 @@ export default function FederalElectionCarousel() {
             author: "Femi Horrall",
             link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
         },
+        {category: "2024 Elections",
+          title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
+          author:"Nineth Kanieski Koso",
+          link:"https://dailynorthwestern.com/2024/10/30/campus/cnn-political-analyst-van-jones-talks-life-experiences-upcoming-election-at-nu-college-democrats-event/"
+
+        }
     ];
 
     return (
       <Box className="carousel-container">
-        <Carousel.Root>
+        <Carousel.Root style={{ maxWidth: "55%" }} itemsPerPage={2}>
           {/* Carousel Header */}
           <Carousel.Header>
             <Carousel.HeaderContent>

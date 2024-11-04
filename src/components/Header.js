@@ -17,10 +17,7 @@ export default function Header({ toggleSidebar }) {
 
   return (
     <Box className="header-container">
-      {/* <button className="sidebar-toggle" onClick={toggleSidebar}>
-        Toggle Menu
-        </button> */}
-
+    
         <NavigationMenu.Root>
         <NavigationMenu.List>
           <NavigationMenu.Item>

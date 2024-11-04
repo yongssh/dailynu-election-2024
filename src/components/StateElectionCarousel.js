@@ -22,7 +22,7 @@ export default function StateElectionCarousel() {
 
     return (
       <Box className="carousel-container">
-        <Carousel.Root>
+      <Carousel.Root style={{ maxWidth: "58%" }} itemsPerPage={2}>
           {/* Carousel Header */}
           <Carousel.Header>
             <Carousel.HeaderContent>

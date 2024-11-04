@@ -4,10 +4,10 @@ import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
 import "../App.css"
 const FederalElectionResults = () => {
     return (
-        <section className="dataviz-container">
+        <div className="dataviz-container">
             <h2>Federal Elections </h2>
             
-            <section id="federal">
+            <div id="federal">
             <div className="presidential-dataviz">
                 {/* <h3>Presidential Results</h3> */}
                 
@@ -25,20 +25,22 @@ const FederalElectionResults = () => {
 
             <div className="congressional-dataviz">
                 {/* <h3>Congressional Results</h3> */}
-            <iframe title="US House - 7" 
-            aria-label="Election Donut" 
-            id="datawrapper-chart-772Sh" 
-            src="https://datawrapper.dwcdn.net/772Sh/1/" 
+            <iframe title="US House IL-9 Election" 
+            aria-label="Bar Chart" 
+            id="datawrapper-chart-RueGZ" 
+            src="https://datawrapper.dwcdn.net/RueGZ/6/" 
+            scrolling="no" 
             frameborder="0" 
-            // style="width: 0; min-width: 100% !important; border: none;" 
-            height="163" 
-            data-external="1">
+            className="responsive-iframe"
 
-           </iframe>
+            data-external="1">
+            </iframe>
+
+
            </div>
-           </section>
+           </div>
           
-        </section>
+        </div>
         
     );
 };
