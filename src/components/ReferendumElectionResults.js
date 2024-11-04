@@ -1,42 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
-const ReferendumElectionResults = () => {
- 
+import React from 'react';
+import { Accordion, Box } from '@washingtonpost/wpds-ui-kit';
 
+const ReferendumElectionResults = () => {
     return (
-        <section>
+        <section className="dataviz-container referenda">
             <h2>Referenda Results</h2>
-            <section id="referenda">
-            <div className="presidential-dataviz">
-                {/* <h3>Presidential Results</h3> */}
-               
-                <iframe
-                    title="Presidential Election"
-                    aria-label="Split Bars"
-                    id="datawrapper-chart-XSYus"
-                    src="https://datawrapper.dwcdn.net/XSYus/4/"
-                    data-external="1"
-                    scrolling='no'
-                    style={{border: "none", width: "400px", height: "200px" }}
-                ></iframe>            
+            <div id="federal">
+                <div className="dataviz">
+                    <iframe 
+                        title="Election Worker Referendum" 
+                        aria-label="Bar Chart" 
+                        id="datawrapper-chart-qsRBU" 
+                        src="https://datawrapper.dwcdn.net/qsRBU/1/" 
+                        scrolling="no" 
+                        frameBorder="0" 
+                        className="responsive-iframe"
+                        data-external="1"
+                    ></iframe>
                 </div>
     
-            <div className="congressional-dataviz">
-                {/* <h3>Congressional Results</h3> */}
-            <iframe title="US House - 7" 
-            aria-label="Election Donut" 
-            id="datawrapper-chart-772Sh" 
-            src="https://datawrapper.dwcdn.net/772Sh/1/" 
-            frameborder="0" 
-            // style="width: 0; min-width: 100% !important; border: none;" 
-            height="163" 
-            data-external="1">
+                <div className="dataviz">
+                    <iframe 
+                        title="Property Tax Referendum" 
+                        aria-label="Bar Chart" 
+                        id="datawrapper-chart-5sIIJ" 
+                        src="https://datawrapper.dwcdn.net/5sIIJ/1/" 
+                        scrolling="no" 
+                        frameBorder="0" 
+                        className="responsive-iframe"
+                        data-external="1"
+                    ></iframe>
+                </div>
 
-           </iframe>
-           </div>
+                <div className="dataviz">
+                    <iframe 
+                        title="Assisted Reproductive Healthcare Referendum" 
+                        aria-label="Bar Chart" 
+                        id="datawrapper-chart-iUzIy" 
+                        src="https://datawrapper.dwcdn.net/iUzIy/1/"
+                        scrolling="no" 
+                        frameBorder="0" 
+                        className="responsive-iframe"
+                        data-external="1"
+                    ></iframe>
+                </div>
+            </div>
         </section>
-        </section>
-        
     );
 };
 

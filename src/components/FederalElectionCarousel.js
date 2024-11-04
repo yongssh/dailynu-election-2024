@@ -18,12 +18,23 @@ export default function FederalElectionCarousel() {
             author: "Femi Horrall",
             link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
         },
-        {category: "2024 Elections",
-          title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
-          author:"Nineth Kanieski Koso",
-          link:"https://dailynorthwestern.com/2024/10/30/campus/cnn-political-analyst-van-jones-talks-life-experiences-upcoming-election-at-nu-college-democrats-event/"
+        {
+            imageUrl:"/article-photos/KosoThomasMiller.png",
+            category: "2024 Elections",
+            title: "Who’s leading the presidential race? This NU professor says the answer lies in election betting markets",
+            author:"Nineth Kanieski Koso",
+            link:"https://dailynorthwestern.com/2024/10/30/campus/whos-leading-the-presidential-race-this-nu-professor-says-the-answer-lies-in-election-betting-markets/"
 
-        }
+        },
+        {
+          imageUrl:"/article-photos/Hwang.png",
+          category: "2024 Elections",
+          title: "We asked students how they’re feeling about the election. Here’s what they said.",
+          author:"Scott Hwang",
+          link:"https://dailynorthwestern.com/2024/10/30/campus/we-asked-students-how-theyre-feeling-about-the-election-heres-what-they-said/"
+
+      }
+
     ];
     const maxWidth = window.innerWidth < 768 ? "100%" : "55%";
     const maxItemsPerPage = window.OverconstrainedError < 768? 2 : 1;

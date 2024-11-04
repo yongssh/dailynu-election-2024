@@ -35,28 +35,28 @@ function App() {
             <div className="main-content">
                 <div className="content">
                     {/* Federal Section */}
-                    <div className="election-section">
+                    <div id="federal" className="election-section">
                         <FederalElectionResults />
                         <FederalElectionCarousel />
                     </div>
                     <HorizontalDivider />
 
                     {/* State Section */}
-                    <div className="election-section">
+                    <div id="illinois" className="election-section">
                         <StateElectionResults />
                         <StateElectionCarousel />
                     </div>
                     <HorizontalDivider />
 
                     {/* Cook County Section */}
-                    <div className="election-section">
+                    <div id="cook-county" className="election-section">
                         <CookCountyElectionResults />
                         <CookCountyCarousel />
                     </div>
                     <HorizontalDivider />
 
                     {/* Referendum Section */}
-                    <div className="election-section">
+                    <div id="referenda" className="election-section">
                         <ReferendumElectionResults />
                         <ReferendumCarousel />
                     </div>

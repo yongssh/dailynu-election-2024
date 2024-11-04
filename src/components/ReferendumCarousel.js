@@ -20,7 +20,7 @@ export default function CookCountyCarousel() {
         },
     ];
 
-    const maxWidth = window.innerWidth < 768 ? "100%" : "55%"; // Change 768px to your desired breakpoint
+    const maxWidth = window.innerWidth < 768 ? "100%" : "55%"; 
     const maxItemsPerPage = window.OverconstrainedError < 768? 2 : 1;
     return (
       <Box className="carousel-container">

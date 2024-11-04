@@ -9,13 +9,13 @@ export default function StateElectionCarousel() {
             category: "2024 Elections",
             title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
             author: "Nineth Kanieski Koso",
-            link: "https://dailynorthwestern.com/2024/10/30/campus/cnn-political-analyst-van-jones-talks-life-experiences-upcoming-election-at-nu-college-democrats-event/",
+            link: "https://dailynorthwestern.com/2024/10/06/city/the-daily-explains-whos-on-the-ballot-for-evanston-voters/",
         },
         {
-            imageUrl: "/article-photos/NowIsWhenWeHavePower.jpg",
+            imageUrl: "/article-photos/Ogburn.jpg",
             category: "2024 Elections",
-            title: "“Now is when we have power”: Voters consider withholding presidential votes in protest of war in Gaza",
-            author: "Femi Horrall",
+            title: "The Daily Explains: Who’s on the ballot for Evanston voters?",
+            author: "Lily Ogburn",
             link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
         },
     ];

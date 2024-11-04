@@ -7,8 +7,8 @@ const StateElectionResults = () => {
         <section className="dataviz-container">
             <h2>Illinois Elections </h2>
                 
-            <a id="illinois">
-            <div className="presidential-dataviz">
+            
+            <div className="dataviz">
                 {/* <h3>Presidential Results</h3> */}
 
                 <iframe 
@@ -19,12 +19,11 @@ const StateElectionResults = () => {
                 scrolling="no" 
                 frameborder="0" 
                 className="responsive-iframe"
-                height="143" data-external="1">
-
+                data-external="1">
                 </iframe>
                 </div>
     
-            <div className="congressional-dataviz">
+            <div className="dataviz">
                 {/* <h3>Congressional Results</h3> */}
                 <iframe title="IL State House 18 Election" 
                 aria-label="Bar Chart" 
@@ -33,12 +32,11 @@ const StateElectionResults = () => {
                 scrolling="no" 
                 frameborder="0" 
                 className="responsive-iframe"
-                width="600" 
-                height="143" d
-                ata-external="1">
+                
+                data-external="1">
                 </iframe>
            </div>
-           </a>
+
         </section>
         
     );

@@ -5,11 +5,11 @@ import "../App.css";
 export default function CookCountyCarousel() {
     const items = [
         {
-            imageUrl: "/article-photos/JONES_Nineth_CMYK-1200x800.jpg",
+            imageUrl: "/article-photos/Taxay.jpg",
             category: "2024 Elections",
-            title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
-            author: "Nineth Kanieski Koso",
-            link: "https://dailynorthwestern.com/2024/10/30/campus/cnn-political-analyst-van-jones-talks-life-experiences-upcoming-election-at-nu-college-democrats-event/",
+            title: "Innocent until proven guilty: Cook County Jail expands pretrial voter access",
+            author: "Naomi Taxay",
+            link: "https://dailynorthwestern.com/2024/10/30/lateststories/innocent-until-proven-guilty-cook-county-jail-expands-pretrial-voter-access/",
         },
         {
             imageUrl: "/article-photos/NowIsWhenWeHavePower.jpg",

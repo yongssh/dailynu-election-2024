@@ -4,16 +4,17 @@ import { NavigationMenu, Box, Icon, Button } from "@washingtonpost/wpds-ui-kit";
 import '../App.css';
 
 export default function Header({ toggleSidebar }) {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    const headerHeight = document.querySelector('.fixed-header').offsetHeight;
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
     if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 100,  
-        behavior: 'smooth',
-      });
+        window.scrollTo({
+            top: section.offsetTop - headerHeight,
+            behavior: 'smooth',
+        });
     }
-  };
+};
 
   return (
     <Box className="header-container">
@@ -25,9 +26,7 @@ export default function Header({ toggleSidebar }) {
               role="button"
               onClick={() => scrollToSection("federal")}
               className="menu-trigger"
-            >
-              Federal
-            </div>
+            >Federal</div>
           </NavigationMenu.Item>
         </NavigationMenu.List>
       </NavigationMenu.Root>
@@ -39,9 +38,7 @@ export default function Header({ toggleSidebar }) {
               role="button"
               onClick={() => scrollToSection("illinois")}
               className="menu-trigger"
-            >
-              Illinois
-            </div>
+            >Illinois</div>
           </NavigationMenu.Item>
         </NavigationMenu.List>
       </NavigationMenu.Root>
@@ -53,9 +50,7 @@ export default function Header({ toggleSidebar }) {
               role="button"
               onClick={() => scrollToSection("cook-county")}
               className="menu-trigger"
-            >
-              Cook County
-            </div>
+            >Cook County</div>
           </NavigationMenu.Item>
         </NavigationMenu.List>
       </NavigationMenu.Root>
@@ -67,9 +62,7 @@ export default function Header({ toggleSidebar }) {
               role="button"
               onClick={() => scrollToSection("referenda")}
               className="menu-trigger"
-            >
-              Referenda
-            </div>
+            >Referenda</div>
           </NavigationMenu.Item>
         </NavigationMenu.List>
       </NavigationMenu.Root>
