@@ -492,7 +492,8 @@ h2 {
   .sidebar-toggle {
     display: block;
     color: #501e4c;
-    top:0;
+    top:5;
+    left:5;
   
     padding:0px; 
     margin-top: 10px;
