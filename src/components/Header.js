@@ -9,7 +9,7 @@ export default function Header({ toggleSidebar }) {
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 100, // Adjust 100px based on your header's height
+        top: section.offsetTop - 100,  
         behavior: 'smooth',
       });
     }

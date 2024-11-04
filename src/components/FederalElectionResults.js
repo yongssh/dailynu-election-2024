@@ -18,8 +18,8 @@ const FederalElectionResults = () => {
                     src="https://datawrapper.dwcdn.net/XSYus/4/"
                     data-external="1"
                     scrolling='no'
-                    style={{border: "none", width: "400px", height: "200px" }}
-                ></iframe>            
+                    className="responsive-iframe"  
+                    ></iframe>            
                 </div>
         
 

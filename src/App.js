@@ -32,7 +32,6 @@ function App() {
                 <Header />
             </div>
 
-            {/* Sidebar component that will be conditionally rendered */}
             <div id="sidebar" className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
                 <Sidebar onClose={toggleSidebar} />
             </div>
