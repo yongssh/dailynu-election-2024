@@ -2,7 +2,7 @@
 import React from 'react';
 import Introduction from './Introduction'; 
 import TwitterFeed from './TwitterFeed';  
-import { ChevronLeft } from "@washingtonpost/wpds-assets"; // Import the ChevronLeft icon
+import { ChevronLeft } from "@washingtonpost/wpds-assets";  
 import '../App.css';                   
 
 const Sidebar = ({ onClose }) => {
