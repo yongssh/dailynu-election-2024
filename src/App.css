@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #FAFAFA;
   }
   .introduction-container{
     display: flex;
@@ -31,7 +32,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: white;
+    background-color: #FAFAFA;
     align-items: center;
     align-self: center;
     justify-content: center;
@@ -39,7 +40,7 @@
 
   header {
     background-color: #501e4c; 
-    color: white;
+    color: #FAFAFA;
     padding: 10px;
     margin-top: 20px;
     text-align: center;
@@ -47,9 +48,12 @@
   }
 
   header h1 {
+
     margin: 0;
   }
   .carousel-container {
+    color: #501e4c;
+    font-family: Georgia, serif;
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -57,11 +61,15 @@
 }
 
 .carousel-title {
-    font-family: Georgia, serif;
+  color: #501e4c;
+  font-family: Georgia, serif;
 }
 
 .carousel-card {
-    width: 300px;
+    color: #501e4c;
+    font-family: Georgia, serif;
+    width: 255px;
+    height:50;
     margin-bottom: 0.5rem;
     margin-right: 1rem;
     padding: 1rem;
@@ -69,6 +77,8 @@
 }
 
 .carousel-card-image {
+  color: #501e4c;
+  font-family: Georgia, serif;
     display: flex;
     align-items: flex-end;
     height: 179px;
@@ -79,6 +89,8 @@
 }
 
 .carousel-card-category {
+  color: #501e4c;
+  font-family: Georgia, serif;
     font-weight: bold;
     font-size: 0.75rem;
     margin-top: 0;
@@ -86,14 +98,17 @@
 }
 
 .carousel-card-title {
-    font-size: 1.5rem;
-    font-family: "Arial", sans-serif;
+  color: #501e4c;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 .carousel-card-author, .carousel-card-link {
-    color: #5a5a5a;
+    color: #501e4c;
+    font-family: Georgia, serif;
+
     font-size: 0.875rem;
     text-decoration: none;
 }
@@ -169,14 +184,26 @@
   .coverage-link {
     font-size: 18px;
     padding: 8px 8px;
-    border: 2px solid #FFFFFF;
-    margin-top: 25px;
+    border: 2px solid #501e4c;
+    margin: 25px;
     color: #501e4c;
     border-radius: 4px;      
     text-align: center;
     text-decoration: underline;
     display: inline-block;   
   }
+  .coverage-link:hover {
+    font-size: 18px;
+    padding: 8px 8px;
+    border: 2px solid #501e4c;
+    margin: 25px;
+    background-color: #0000;
+    border-radius: 4px;      
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;   
+  }
+
 
 
   .sidebar {
@@ -279,24 +306,6 @@
   min-height: 100px; /* Set a minimum height */
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .cook-county #cook-county {
-      flex-direction: column; /* Stack items vertically */
-  }
-
-  .cook-county .dataviz {
-      flex: 1 1 100%; /* Full width on mobile */
-      margin: 5px 0; /* Vertical margin only */
-      min-height: 250px; /* Adjust height for mobile */
-  }
-
-  .cook-county .responsive-iframe {
-      height: 250px;
-     
-  }
-}
-
 .referenda .responsive-iframe {
   width: 100%; /* Make iframe fill the width of its parent */
   height: 260px; /* Set a fixed height for visibility */
@@ -335,7 +344,7 @@
 
   border: none;
   width: 800px; 
-  margin:20px;
+
   margin-top: 0px;
   padding-top:0px;
   }
@@ -485,12 +494,16 @@
 /* CAROUSEL */
 
   .carousel-card {
-      width: 25; 
+    color: #501e4c;
+    margin: 0 auto;
+
       align-self: center;
-      margin-right: 10rem;
-      margin-left:auto;
+      max-width: 80%; /* Maximum width for larger screens */
+      margin: 1.5rem; /*Center card and add vertical spacing*/
   }
   .carousel-container {
+    color: #501e4c;
+
     padding-top: 1rem;
     padding-left: auto;
     padding-right: auto;
@@ -499,6 +512,7 @@
     width: 90vw;
   }
   .carousel-card-title{
+    color: #501e4c;
     justify-content: center;
   }
   .carousel-title {

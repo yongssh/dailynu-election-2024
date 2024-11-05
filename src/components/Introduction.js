@@ -28,7 +28,7 @@ const Introduction = () => {
                         </Accordion.Trigger>
                         <Accordion.Content>
                             <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
-                              The general election for the Illinois House of Representatives' 17th and 18th Districts.
+                              The general election for the Illinois House of Representatives' 17th and 18th Districts is afoot.
                             </div>
                         </Accordion.Content>
                     </Accordion.Item>
@@ -39,7 +39,7 @@ const Introduction = () => {
                         </Accordion.Trigger>
                         <Accordion.Content>
                             <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
-                               There are races for the Cook County State's Attorney, the Cook County Clerk, the Cook County Circuit Court Clerk, and the Water Reclamation District.
+                               Tune in to learn about the races for the Cook County State's Attorney, the Cook County Clerk, the Cook County Circuit Court Clerk, and the Water Reclamation District.
                             </div>
                         </Accordion.Content>
                     </Accordion.Item>

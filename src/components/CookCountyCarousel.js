@@ -67,7 +67,7 @@ export default function CookCountyCarousel() {
                  <Carousel.Content>
                      {items.map((item, index) => (
                          <Carousel.Item key={index}>
-                             <Card className="carousel-card">
+                             <Card className="carousel-card">\ <a href={item.link} target="_blank" rel="noopener noreferrer" className="carousel-card-link">
                                  <Box
                                      className="carousel-card-image"
                                      style={{
@@ -77,8 +77,8 @@ export default function CookCountyCarousel() {
                                  <p className="carousel-card-category">{item.category}</p>
                                  <h2 className="carousel-card-title">{item.title}</h2>
                                  <p className="carousel-card-author">{item.author}</p>
-                                 <a href={item.link} target="_blank" rel="noopener noreferrer" className="carousel-card-link">
-                                     By {item.author}
+                                
+                                   
                                  </a>
                              </Card>
                          </Carousel.Item>
