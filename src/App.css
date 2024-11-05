@@ -192,17 +192,7 @@
     text-decoration: underline;
     display: inline-block;   
   }
-  .coverage-link:hover {
-    font-size: 18px;
-    padding: 8px 8px;
-    border: 2px solid #501e4c;
-    margin: 25px;
-    background-color: #0000;
-    border-radius: 4px;      
-    text-align: center;
-    text-decoration: underline;
-    display: inline-block;   
-  }
+ 
 
 
 
