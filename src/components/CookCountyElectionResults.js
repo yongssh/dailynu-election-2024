@@ -5,7 +5,7 @@ import "../App.css";
 
 const CookCountyElectionResults = () => {
     return (
-        <section className="dataviz-container cook-county">
+        <section className="dataviz-container">
             <h2>Cook County Elections</h2>
             
             <div id="cook-county">
@@ -61,7 +61,7 @@ const CookCountyElectionResults = () => {
                     </iframe>
                 </div>
 
-                <div className="dataviz">
+                <div className="dataviz ">
                     <iframe 
                         title="Metropolitan Water Reclamation District Election (2/2)" 
                         aria-label="Bar Chart" 

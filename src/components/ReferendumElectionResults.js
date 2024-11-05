@@ -8,7 +8,7 @@ const ReferendumElectionResults = () => {
             <h2>Referenda Results</h2>
             
             <div id="referenda">
-            <div className="dataviz">
+            <div className="dataviz referenda">
                     <iframe 
                         title="Election Worker Referendum" 
                         aria-label="Bar Chart" 
@@ -21,7 +21,7 @@ const ReferendumElectionResults = () => {
                     ></iframe>
                 </div>
     
-                <div className="dataviz">
+                <div className="dataviz referenda">
                     <iframe 
                         title="Property Tax Referendum" 
                         aria-label="Bar Chart" 
@@ -34,7 +34,7 @@ const ReferendumElectionResults = () => {
                     ></iframe>
                 </div>
 
-                <div className="dataviz">
+                <div className="dataviz cook-county">
                     <iframe 
                         title="Assisted Reproductive Healthcare Referendum" 
                         aria-label="Bar Chart" 

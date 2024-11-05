@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Carousel, Box, Card } from "@washingtonpost/wpds-ui-kit";
-import "../App.css";
 
-export default function FederalElectionCarousel() {
-    const items = [
+  import React, { useState, useEffect } from "react";
+  import { Carousel, Box, Card, Button, Icon } from "@washingtonpost/wpds-ui-kit";
+  import "../App.css";
+  
+  export default function FederalElectionCarousel() {
+      const items = [
         {
             imageUrl: "article-photos/JONES_Nineth_CMYK-1200x800.jpg",
             category: "2024 Elections",
@@ -40,33 +41,33 @@ export default function FederalElectionCarousel() {
             link: "https://dailynorthwestern.com/2024/10/24/city/lake-street-church-offers-meditative-strategies-to-alleviate-election-anxiety/",
         },
     ];
+  
 
-    const [maxWidth, setMaxWidth] = useState("55%");
-    const [maxItemsPerPage, setMaxItemsPerPage] = useState(1);
+    // State to manage items per page
+    const [itemsPerPage, setItemsPerPage] = useState(window.innerWidth <= 768 ? 2 : 1);
 
+    // Update items per page on window resize
     useEffect(() => {
-        const updateDimensions = () => {
-            const width = window.innerWidth;
-            setMaxWidth(width < 768 ? "100%" : "55%");
-            setMaxItemsPerPage(width < 768 ? 2 : 1);
+        const handleResize = () => {
+            setItemsPerPage(window.innerWidth <= 768 ? 2 : 1);
         };
-
-        updateDimensions(); // Initial call
-        window.addEventListener('resize', updateDimensions);
         
-        return () => window.removeEventListener('resize', updateDimensions); // Cleanup on unmount
+        window.addEventListener("resize", handleResize);
+        
+        // Cleanup event listener on component unmount
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return (
         <Box className="carousel-container">
-            <Carousel.Root style={{ maxWidth }} itemsPerPage={maxItemsPerPage}>
+            <Carousel.Root itemsPerPage={itemsPerPage}>
                 <Carousel.Header>
                     <Carousel.HeaderContent>
                         <Carousel.Title className="carousel-title">
                             Federal Election Coverage
                         </Carousel.Title>
                     </Carousel.HeaderContent>
-                    <Carousel.HeaderActions className="carousel-header-actions">
+                    <Carousel.HeaderActions>
                         <Carousel.PreviousButton />
                         <Carousel.NextButton />
                     </Carousel.HeaderActions>
@@ -75,25 +76,20 @@ export default function FederalElectionCarousel() {
                 <Carousel.Content>
                     {items.map((item, index) => (
                         <Carousel.Item key={index}>
-                            <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                                <Card className="carousel-card">
-                                    <Box
-                                        className="carousel-card-image"
-                                        css={{
-                                            backgroundImage: `url(${item.imageUrl})`,
-                                        }}
-                                    />
-                                    <Box as="p" className="carousel-card-category">
-                                        {item.category}
-                                    </Box>
-                                    <Box as="h2" className="carousel-card-title">
-                                        {item.title}
-                                    </Box>
-                                    <Box as="a" href="#" className="carousel-card-author">
-                                        {item.author}
-                                    </Box>
-                                </Card>
-                            </a>
+                            <Card className="carousel-card">
+                                <Box
+                                    className="carousel-card-image"
+                                    style={{
+                                        backgroundImage: `url(${item.imageUrl})`,
+                                    }}
+                                />
+                                <p className="carousel-card-category">{item.category}</p>
+                                <h2 className="carousel-card-title">{item.title}</h2>
+                                <p className="carousel-card-author">{item.author}</p>
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" className="carousel-card-link">
+                                    By {item.author}
+                                </a>
+                            </Card>
                         </Carousel.Item>
                     ))}
                 </Carousel.Content>
