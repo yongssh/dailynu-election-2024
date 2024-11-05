@@ -16,12 +16,12 @@
     justify-content: center;
   }
   .introduction-container{
-    display: "flex";
-    width: "100%";
-    max-width: "500px";
-    row-gap: "20px";
-    flex-direction: "column";
-    margin: "10 auto" ;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    row-gap: 20px;
+    flex-direction: column;
+    margin: 10 auto ;
     overflow-y:auto
   }
 
@@ -109,7 +109,7 @@
     width: 100%;   
     margin-top: 0px;
     padding:0px;
-    gap: 0.3rem; /* Space between "Read Our Coverage" link and the button */
+    gap: 0.3rem; 
   }
   .coverage-link {
     font-size: 18px;
@@ -204,9 +204,52 @@
     align-items: start;
     width: calc(100vw - 80px);
     margin: 0 0;
+    height: fit-content;
 
   }
-  
+ /* New subclass styles
+ .cook-county {
+  width: 100%;
+}
+
+.cook-county #cook-county {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  width: 100%; 
+} */
+
+.cook-county .dataviz {
+  flex: 1 1 400px; /* Set a base width for dataviz items */
+  margin: 5px; /* Reduced space between dataviz items */
+  max-width: 100%; /* Prevent overflowing */
+  min-height: 100px; /* Set a minimum height */
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .cook-county #cook-county {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .cook-county .dataviz {
+      flex: 1 1 100%; /* Full width on mobile */
+      margin: 5px 0; /* Vertical margin only */
+      min-height: 250px; /* Adjust height for mobile */
+  }
+
+  .cook-county .responsive-iframe {
+      height: 250px; /* Adjust height for mobile */
+  }
+}
+
+.cook-county .responsive-iframe {
+  width: 100%; /* Make iframe fill the width of its parent */
+  height: 400px; /* Set a fixed height for visibility */
+  border: none; /* Remove default border */
+  display: block; /* Ensure there's no extra space below the iframe */
+}
+
   .dataviz-container {
     flex: 1; 
     max-width: 35%; 
@@ -219,7 +262,7 @@
 
   } 
   
-  .responsive-iframe{
+  .responsive-iframe {
     border: none;
     width: 100%;
     height: auto;
@@ -227,21 +270,19 @@
   }
 
   .dataviz{
-  border: "none";
-  width: "800px"; 
-  height: "138px";
-  margin:5px;
+
+  border: none;
+  width: 800px; 
+  max-height: None;
+  margin:20px;
+  
+
   }
 .water-reclamation-1-dataviz{
-  border: "none";
-  width: "800px"; 
-  height: "900px";
+  border: none;
+  width: 800px; 
+  height: 900px;
 }
-  .congressional-dataviz{
-  border: "none";
-  width: "800px"; 
-  height: "138px";
-  }
 
 
 
@@ -397,10 +438,10 @@
     justify-content: center; 
     align-items: center;
     background-color: #FAFAFA; 
-    padding: 20px; 
+    padding: 10px; 
     color: #501e4c; 
     position: relative; 
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
 
   /* Responsive Styles */
@@ -464,24 +505,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: fit-content;
     
   }
 
   .dataviz-container.referenda{
-    height: fit-content;
+    height: 100vw;
   }
 
   
   .dataviz {
-    /* border: "none";
+    border: none;
     width: 800px; 
     height: auto;
     margin: 0px 10px; 
-    padding: 5px; */
-    flex: 1 1 300px; /* Allow flex items to grow, shrink, and set a minimum width */
-    margin: 10px; /* Space between dataviz items */
-    max-width: 100%; /* Prevent overflowing */
+    padding: 5px;
+    /* flex: 1 1 300px; 
+    margin: 10px; 
+    max-width: 100%; 
     
+    height: fit-content; */
   }
   .responsive-iframe {
     width: 100%;
@@ -594,9 +637,9 @@
     padding: 4px 4px;
     align-self: center;
     justify-self: center;
-    display: "flex";
-    align-items: "center";
-    justify-content: "center";
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
   }
   Button {

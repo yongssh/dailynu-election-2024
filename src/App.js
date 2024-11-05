@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import Header from './components/Header';
 import DailyLogo from './components/DailyLogo';
@@ -49,10 +48,11 @@ function App() {
                     <HorizontalDivider />
 
                     {/* Cook County Section */}
-                    <div id="cook-county" className="election-section">
-                        <CookCountyElectionResults />
+                    <div id="cook-county" className="election-section cook-county">
+                        <CookCountyElectionResults  />
                         <CookCountyCarousel />
                     </div>
+                
                     <HorizontalDivider />
 
                     {/* Referendum Section */}

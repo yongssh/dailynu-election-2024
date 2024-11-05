@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, Menu } from "@washingtonpost/wpds-assets";
 import { FaBars } from 'react-icons/fa';
+import "../App.css"; 
+
 
 const DailyLogo = ({ toggleSidebar, sidebarOpen }) => {
     return (

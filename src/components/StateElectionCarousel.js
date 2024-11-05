@@ -5,14 +5,14 @@ import "../App.css";
 export default function StateElectionCarousel() {
     const items = [
         {
-            imageUrl: "/article-photos/JONES_Nineth_CMYK-1200x800.jpg",
+            imageUrl: "article-photos/WhereToVote.jpg",
             category: "2024 Elections",
-            title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
-            author: "Nineth Kanieski Koso",
-            link: "https://dailynorthwestern.com/2024/10/06/city/the-daily-explains-whos-on-the-ballot-for-evanston-voters/",
+            title: "Where to vote in Evanston for the 2024 Election",
+            author: "Danny O'Grady",
+            link: "https://dailynorthwestern.com/2024/10/30/city/where-to-vote-in-evanston-for-the-2024-election/",
         },
         {
-            imageUrl: "/article-photos/Ogburn.jpg",
+            imageUrl: "article-photos/Ogburn.jpg",
             category: "2024 Elections",
             title: "The Daily Explains: Who’s on the ballot for Evanston voters?",
             author: "Lily Ogburn",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Accordion, Box } from '@washingtonpost/wpds-ui-kit';
+import "../App.css"; 
 
 const Introduction = () => {
     return (

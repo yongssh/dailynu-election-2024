@@ -2,20 +2,20 @@ import React from "react";
 import { Carousel, Box, Card } from "@washingtonpost/wpds-ui-kit";
 import "../App.css"; 
 
-export default function CookCountyCarousel() {
+export default function ReferendumCarousel() {
     const items = [
         {
-            imageUrl: "/article-photos/JONES_Nineth_CMYK-1200x800.jpg",
+            imageUrl: "article-photos/MISINFORMATION-Isabella-Dumenigo-1200x675.jpg",
             category: "2024 Elections",
-            title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
-            author: "Nineth Kanieski Koso",
-            link: "https://dailynorthwestern.com/2024/10/30/campus/cnn-political-analyst-van-jones-talks-life-experiences-upcoming-election-at-nu-college-democrats-event/",
+            title: "Political misinformation can decrease voter turnout in local elections, local experts warn",
+            author: "Isaiah Steinberg",
+            link: "https://dailynorthwestern.com/2024/10/30/city/political-misinformation-can-decrease-voter-turnout-in-local-elections-local-experts-warn/",
         },
         {
-            imageUrl: "/article-photos/NowIsWhenWeHavePower.jpg",
+            imageUrl: "article-photos/REFERENDA-Iliana-Garner-1200x800.jpg",
             category: "2024 Elections",
-            title: "“Now is when we have power”: Voters consider withholding presidential votes in protest of war in Gaza",
-            author: "Femi Horrall",
+            title: "Illinois to vote on three advisory referenda: elections, taxes, IVF",
+            author: "Naomi Taxay and Shreya Srinivasan",
             link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
         },
     ];

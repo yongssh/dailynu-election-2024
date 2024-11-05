@@ -1,12 +1,14 @@
 import React from 'react';
 import { Accordion, Box } from '@washingtonpost/wpds-ui-kit';
+import "../App.css"; 
 
 const ReferendumElectionResults = () => {
     return (
         <section className="dataviz-container referenda">
             <h2>Referenda Results</h2>
-            <div id="federal">
-                <div className="dataviz">
+            
+            <div id="referenda">
+            <div className="dataviz">
                     <iframe 
                         title="Election Worker Referendum" 
                         aria-label="Bar Chart" 

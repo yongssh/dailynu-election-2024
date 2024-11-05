@@ -1,5 +1,6 @@
 import React from 'react';
 import { Divider, Box } from "@washingtonpost/wpds-ui-kit";
+import "../App.css"; 
 
 export default function HorizontalDivider() {
     return (
