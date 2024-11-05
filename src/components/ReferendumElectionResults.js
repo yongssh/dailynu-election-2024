@@ -34,7 +34,7 @@ const ReferendumElectionResults = () => {
                     ></iframe>
                 </div>
 
-                <div className="dataviz cook-county">
+                <div className="dataviz referenda">
                     <iframe 
                         title="Assisted Reproductive Healthcare Referendum" 
                         aria-label="Bar Chart" 
