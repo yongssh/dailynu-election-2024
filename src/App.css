@@ -63,6 +63,7 @@
 .carousel-title {
   color: #501e4c;
   font-family: Georgia, serif;
+  font-size:18px;
 }
 
 .carousel-card {
@@ -241,7 +242,7 @@
   left: 0;
   right: 0; */
   background-color: #FAFAFA;
-  padding-top: 150px; 
+  padding-top: 120px; 
   border: none;
   box-shadow: none;
   display: flex;
@@ -259,6 +260,7 @@
   }
 
   h2 {
+  font-size: 24px;
   border-bottom: 2px solid #501e4c;
   padding-bottom: 10px;
   }
@@ -268,7 +270,7 @@
     display: flex;
     flex-grow: 1; 
     flex-direction: column;
-  
+
   }
  
 
