@@ -16,7 +16,7 @@ export default function StateElectionCarousel() {
             category: "2024 Elections",
             title: "The Daily Explains: Who’s on the ballot for Evanston voters?",
             author: "Lily Ogburn",
-            link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
+            link: "https://dailynorthwestern.com/2024/10/06/city/the-daily-explains-whos-on-the-ballot-for-evanston-voters/",
         },
     ];
 

@@ -16,7 +16,7 @@ export default function CookCountyCarousel() {
             category: "2024 Elections",
             title: "Everything Evanston: Local leaders prepare for 2024 election",
             author: "Edward Simon Cruz",
-            link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
+            link: "https://dailynorthwestern.com/2024/11/03/audio/everything-evanston-local-leaders-prepare-for-2024-election/",
         },
         {
             imageUrl: "article-photos/YoutubeSS.png",

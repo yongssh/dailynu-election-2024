@@ -16,7 +16,7 @@ export default function ReferendumCarousel() {
             category: "2024 Elections",
             title: "Illinois to vote on three advisory referenda: elections, taxes, IVF",
             author: "Naomi Taxay and Shreya Srinivasan",
-            link: "https://dailynorthwestern.com/2024/10/30/lateststories/now-is-when-we-have-power-citizens-consider-withholding-presidential-votes-in-protest-of-war-in-gaza/",
+            link: "https://dailynorthwestern.com/2024/10/30/city/illinois-to-vote-on-three-advisory-referenda-elections-taxes-ivf/",
         },
     ];
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
