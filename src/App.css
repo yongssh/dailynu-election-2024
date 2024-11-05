@@ -136,10 +136,10 @@
     border: none; 
     cursor: pointer;
     color: black; 
-    padding: 4px 4px; /* Existing padding */
-    border: none; /* Remove default border */
-    background: transparent; /* Make background transparent */
-    cursor: pointer; /* Change cursor to pointer */
+    padding: 4px 4px; 
+    border: none; 
+    background: transparent; 
+    cursor: pointer;  
 }
   
   .sidebar-toggle:hover {
@@ -178,16 +178,16 @@
     align-items: center;     
     width: 100%;   
     margin-top: 0px;
+    margin-bottom:0px;
     padding:0px;
-    gap: 0.3rem; 
+
   }
   .coverage-link {
     font-size: 18px;
-    padding: 8px 8px;
-    border: 2px solid #501e4c;
-    margin: 25px;
+    padding: 4px 4px;
+    margin-top: 25px;
     color: #501e4c;
-    border-radius: 4px;      
+    border-radius: 10px;      
     text-align: center;
     text-decoration: underline;
     display: inline-block;   
@@ -272,52 +272,34 @@
   padding-bottom: 10px;
   }
 
-
-
-
   .election-section {
-    position:relative; /* prevents sideways scroll */
+    position:relative; 
     display: flex;
     flex-grow: 1; 
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* align-items: start; */
-    /* width: 100vw; */
-    /* margin: 0 0; */
-    /* height: fit-content; */
-
+  
   }
- /* New subclass styles
- .cook-county {
-  width: 100%;
-}
-
-.cook-county #cook-county {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  width: 100%; 
-} */
+ 
 
 .cook-county .dataviz {
-  flex: 1 1 400px; /* Set a base width for dataviz items */
-  margin: 5px; /* Reduced space between dataviz items */
-  max-width: 100%; /* Prevent overflowing */
-  min-height: 100px; /* Set a minimum height */
+  flex: 1 1 400px;  
+  margin: 5px; 
+  max-width: 100%; 
+  min-height: 100px; 
 }
 
 .referenda .responsive-iframe {
-  width: 100%; /* Make iframe fill the width of its parent */
-  height: 260px; /* Set a fixed height for visibility */
-  border: none; /* Remove default border */
-  display: block; /* Ensure there's no extra space below the iframe */
+  width: 100%;  
+  height: 260px;  
+  border: none;  
+  display: block; 
 }
 
 .cook-county .responsive-iframe {
-  width: 100%; /* Make iframe fill the width of its parent */
-  height: 300px; /* Set a fixed height for visibility */
-  border: none; /* Remove default border */
-  display: block; /* Ensure there's no extra space below the iframe */
+  width: 100%;  
+  height: 300px;  
+  border: none; 
+  display: block;  
 }
 
 
@@ -352,7 +334,7 @@
 
 
   #datawrapper-chart-45p8N {
-    margin: 0; /* Remove default margin */
+    margin: 0;  
 }
 
 
@@ -466,11 +448,9 @@
     padding: 10px; 
     color: #501e4c; 
     position: relative; 
-    /* margin-top: 20px; */
-  }
+   }
 
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
 
   :root {
     --main-bg-color: #FFFF;
@@ -479,10 +459,11 @@
   }
  
   .centered-container{
- 
-    justify-content: center; /* Align items to the start */
-    width: 100%; /* Ensure it takes full width */
-
+    display: flex;           
+    justify-content: center;   
+    align-items: center;      
+    width: 100%;            
+    height: 100%;  
   }
   .App{
     zoom: 100%; 
@@ -498,8 +479,8 @@
     margin: 0 auto;
 
       align-self: center;
-      max-width: 80%; /* Maximum width for larger screens */
-      margin: 1.5rem; /*Center card and add vertical spacing*/
+      max-width: 80%; 
+      margin: 1.5rem;  
   }
   .carousel-container {
     color: #501e4c;
@@ -528,11 +509,8 @@
     width: 100%;
     display: flex;
     flex-direction: column; 
-    /* gap: 5px; */
     font-size: 10px;
-    /* padding: 0.5rem 0.5rem;  */
-    width: 100%; 
-    /* margin: 20px auto; */
+    width: 100%;
     top: 0;
     z-index:1000;
     position:fixed;
@@ -558,12 +536,10 @@
     align-self: center;
     justify-self: center;
     padding: 20px; 
-    /* overflow-y: auto;  */
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: fit-content; */
-    
+     
   }
 
   .dataviz-container.referenda{
@@ -632,8 +608,7 @@
     padding: 0.5rem;
     width: 100%;
     padding-top: 75px;
-      /* top: 180px; */
-  }
+   }
 
   .sidebar-toggle {
     display: block;
@@ -644,7 +619,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: inherit; /* Matches color scheme */
+    color: inherit; 
     display: flex;
     align-items: center;
   }
@@ -730,12 +705,12 @@
   }
   .election-section {
     display: flex;
-    flex-direction: column; /* Stack sections vertically on smaller screens */
+    flex-direction: column;  
     flex: 1;
   }
   .data-viz-container{
-      max-width: 100%; /* Full width on mobile */
-      margin: 0; /* Reset margins */
+      max-width: 100%; 
+      margin: 0; 
   }
   .menu-icon{
     height:20px;

@@ -1,7 +1,6 @@
-// DailyLogo.js
 import React, { useState } from 'react';
-import { ChevronLeft, Menu } from "@washingtonpost/wpds-assets";
-import { FaBars } from 'react-icons/fa';
+import { ChevronLeft, ChevronRight } from "@washingtonpost/wpds-assets";
+
 import "../App.css"; 
 
 
@@ -18,7 +17,7 @@ const DailyLogo = ({ toggleSidebar, sidebarOpen }) => {
                     onClick={toggleSidebar}
                     aria-label="Toggle Sidebar"
                 >
-                    {sidebarOpen ? <ChevronLeft /> : <Menu className="menu-icon"/>}
+                    {sidebarOpen ? <ChevronLeft /> : <ChevronRight className="menu-icon"/>}
                 </button>
                 <a href="https://dailynorthwestern.com/category/elections2024/" className="coverage-link">
                     Read Our Coverage

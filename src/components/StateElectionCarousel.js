@@ -20,59 +20,76 @@ export default function StateElectionCarousel() {
         },
     ];
 
-     // Adjust items per page based on screen size
-     const [itemsPerPage, setItemsPerPage] = useState(window.innerWidth <= 768 ? 2 : 1);
-     // Update items per page on window resize
-     useEffect(() => {
-       const handleResize = () => {
-           setItemsPerPage(window.innerWidth <= 768 ? 2 : 1);
-       };
-       
-       window.addEventListener("resize", handleResize);
-       
-       // Cleanup event
-       return () => window.removeEventListener("resize", handleResize);
-   }, []);
-   
-   (
-      <Box className="carousel-container">
-          <Carousel.Root itemsPerPage={itemsPerPage}>
-              <Carousel.Header>
-                  <Carousel.HeaderContent>
-                      <Carousel.Title className="carousel-title">
-                        Illinois Election Coverage
-                      </Carousel.Title>
-                  </Carousel.HeaderContent>
-                  <Carousel.HeaderActions className="carousel-actions">
-                      <Carousel.PreviousButton />
-                      <Carousel.NextButton />
-                  </Carousel.HeaderActions>
-              </Carousel.Header>
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-              <Carousel.Content>
-                  {items.map((item, index) => (
-                      <Carousel.Item key={index}>
-                          <Card className="carousel-card">
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="carousel-card-link">
-                              <Box
-                                  className="carousel-card-image"
-                                  style={{
-                                      backgroundImage: `url(${item.imageUrl})`,
-                                  }}
-                              />
-                              <p className="carousel-card-category">{item.category}</p>
-                              <h2 className="carousel-card-title">{item.title}</h2>
-                              <p className="carousel-card-author">{item.author}</p>
-                          </a>
-                          </Card>
-                      </Carousel.Item>
-                  ))}
-              </Carousel.Content>
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
-              <Carousel.Footer>
-                  <Carousel.Dots />
-              </Carousel.Footer>
-          </Carousel.Root>
-      </Box>
-  );
+    return (
+        <Box css={{ paddingInline: isMobile?"$5" : "$100", width: isMobile? "95vw":"72vw", margin: "0 auto" }}>
+            <Carousel.Root itemsPerPage={isMobile ? 1 : 3}>
+                <Carousel.Header>
+                    <Carousel.HeaderContent>
+                        <Carousel.Title>Illinois Coverage</Carousel.Title>
+                    </Carousel.HeaderContent>
+                    <Carousel.HeaderActions>
+                        <Carousel.PreviousButton />
+                        <Carousel.NextButton />
+                    </Carousel.HeaderActions>
+                </Carousel.Header>
+                <Carousel.Content aria-live="polite">
+                    {items.map((item, i) => (
+                        <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
+  <Card
+    css={{
+        width: isMobile ? "90vw" : "255px", // Set width for mobile and desktop
+        height: "450px", // Set consistent height for all cards
+        margin: isMobile ? "10px auto" : "0 10px", // Center on mobile and add margin for desktop
+        marginInline: isMobile? "0" :"auto", // Center the card 
+        padding: isMobile ? "$015" : "$075",
+        boxShadow: isMobile ? "$150" : "$200",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    }}
+>
+    <Box // Image container
+        css={{
+            backgroundImage: `url('${item.imageUrl}')`,
+            backgroundSize: 'cover', // Ensure images fill the container
+            backgroundPosition: 'center', // Center the image in the container
+            height: "180px", // Fixed height for uniform aspect ratio
+            borderRadius: "$100", // Optional, for rounded corners
+        }}
+    />
+    <Box css={{ padding: "$100" }}> {/* Content container */}
+        <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070" }}>
+            {item.category}
+        </Box>
+        <Box as="h2" css={{ fontSize: isMobile ? "$120" : "$150", fontFamily: "$headline", margin: "10px 0" }} id={`article-heading-${i}`}>
+            {item.title}
+        </Box>
+        <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075" }}>
+            {item.author}
+        </Box>
+        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "none" }}>
+            Read more
+        </Box>
+    </Box>
+</Card>
+
+
+
+                        </Carousel.Item>
+                    ))}
+                </Carousel.Content>
+                <Carousel.Footer>
+                    <Carousel.Dots />
+                </Carousel.Footer>
+            </Carousel.Root>
+        </Box>
+    );
 }
