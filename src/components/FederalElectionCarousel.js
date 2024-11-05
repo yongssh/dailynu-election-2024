@@ -68,10 +68,10 @@
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
  <Card
     css={{
-        width: isMobile ? "90vw" : "255px", // Set width for mobile and desktop
-        height: "450px", // Set consistent height for all cards
-        margin: isMobile ? "10px auto" : "0 10px", // Center on mobile and add margin for desktop
-        marginInline: isMobile? "0" :"auto", // Center the card 
+        width: isMobile ? "90vw" : "255px", 
+        height: "450px", 
+        margin: isMobile ? "10px auto" : "0 10px", 
+        marginInline: isMobile? "0" :"auto",  
         padding: isMobile ? "$015" : "$075",
         boxShadow: isMobile ? "$150" : "$200",
         display: "flex",
@@ -79,13 +79,13 @@
         justifyContent: "space-between"
     }}
 >
-    <Box // Image container
+    <Box 
         css={{
             backgroundImage: `url('${item.imageUrl}')`,
-            backgroundSize: 'cover', // Ensure images fill the container
-            backgroundPosition: 'center', // Center the image in the container
-            height: "180px", // Fixed height for uniform aspect ratio
-            borderRadius: "$100", // Optional, for rounded corners
+            backgroundSize: 'cover',  
+            backgroundPosition: 'center',  
+            height: "180px",  
+            borderRadius: "$100", 
         }}
     />
     <Box css={{ padding: "$100" }}> {/* Content container */}

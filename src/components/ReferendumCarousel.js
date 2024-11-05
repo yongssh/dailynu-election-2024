@@ -44,10 +44,10 @@ export default function ReferendumCarousel() {
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
   <Card
     css={{
-        width: isMobile ? "90vw" : "255px", // Set width for mobile and desktop
-        height: "350px", // Set consistent height for all cards
-        margin: isMobile ? "10px auto" : "0 10px", // Center on mobile and add margin for desktop
-        marginInline: isMobile? "-2px" :"auto", // Center the card 
+        width: isMobile ? "90vw" : "255px", 
+        height: "350px",  
+        margin: isMobile ? "10px auto" : "0 10px",   
+        marginInline: isMobile? "-2px" :"auto", 
         padding: isMobile ? "10px" : "$075",
         boxShadow: isMobile ? "$150" : "$200",
         display: "flex",
@@ -58,13 +58,13 @@ export default function ReferendumCarousel() {
     <Box // Image container
         css={{
             backgroundImage: `url('${item.imageUrl}')`,
-            backgroundSize: 'cover', // Ensure images fill the container
-            backgroundPosition: 'center', // Center the image in the container
-            height: "180px", // Fixed height for uniform aspect ratio
-            borderRadius: "$100", // Optional, for rounded corners
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',  
+            height: "180px", 
+            borderRadius: "$100",  
         }}
     />
-    <Box css={{ padding: "$100" }}> {/* Content container */}
+    <Box css={{ padding: "$100" }}>  
         <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070" }}>
             {item.category}
         </Box>
