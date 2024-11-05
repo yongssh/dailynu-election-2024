@@ -8,6 +8,8 @@ const FederalElectionResults = () => {
             <h2>Federal Elections </h2>
             
             <div id="federal">
+            {/* <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/115532/17115.html" width="100%" frameborder="0" scrolling="no" marginheight="0" title="Interactive Embed"></iframe>
+            <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/114037/17425.html" class="ap-embed overflow-hidden border-none" width="100%" scrolling="no" ></iframe> */}
             <div className="dataviz">
                 {/* <h3>Presidential Results</h3> */}
                 

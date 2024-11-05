@@ -28,7 +28,7 @@ export default function ReferendumCarousel() {
     }, []);
 
     return (
-        <Box css={{ paddingInline: isMobile?"$5" : "$100", width: isMobile? "95vw":"72vw", margin: "0 auto" }}>
+        <Box css={{ paddingInline: isMobile?"$5" : "$100", width: isMobile? "95vw":"71vw", margin: "0 auto" }}>
             <Carousel.Root itemsPerPage={isMobile ? 1 : 3}>
                 <Carousel.Header>
                     <Carousel.HeaderContent>

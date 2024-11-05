@@ -22,7 +22,7 @@ const TwitterFeed = () => {
                 style={{ display: 'block', margin: '0 auto' }}
             ></iframe> */}
             <div align="center">
-                <a class="twitter-timeline" data-width="600" data-dnt="true"  data-tweet-limit="4" href="https://twitter.com/thedailynu?ref_src=twsrc%5Etfw">Tweets by thedailynu
+                <a class="twitter-timeline" data-width="600" data-height="300"  data-dnt="true"  data-tweet-limit="4" style={{ padding: '10px', border:'2px solid #967893' }} href="https://twitter.com/thedailynu?ref_src=twsrc%5Etfw">Tweets by thedailynu
                 </a>
 
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">

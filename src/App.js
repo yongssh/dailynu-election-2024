@@ -65,6 +65,7 @@ function App() {
                     © The Daily Northwestern
                 </div>
             </div>
+            
         </div>
     );
 }

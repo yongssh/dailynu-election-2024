@@ -56,7 +56,7 @@ const CookCountyElectionResults = () => {
                         src="https://datawrapper.dwcdn.net/d7sIr/3/" 
                         scrolling="no" 
                         frameBorder="0" 
-                        className="responsive-iframe" 
+                        className="responsive-iframe-water" 
                         data-external="1">
                     </iframe>
                 </div>

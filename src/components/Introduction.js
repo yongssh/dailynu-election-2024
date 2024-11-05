@@ -4,7 +4,7 @@ import "../App.css";
 
 const Introduction = () => {
     return (
-        <section style={{ padding: '20px' }}>
+        <section style={{ padding: '10px', border:'2px solid #967893' }}>
             <p>Welcome to The Daily Northwestern's coverage of the 2024 Election. Explore our brief explainers of what we're reporting on tonight.</p>
             <Box className="introduction-container"
             >
@@ -15,9 +15,9 @@ const Introduction = () => {
                                 Federal
                        
                         </Accordion.Trigger>
-                        <Accordion.Content>
-                            <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
-                               We're covering the President and Vice President race, as well as the election for Illinois' 7th Congressional District Representative. 
+                        <Accordion.Content style={{ padding: '5px'}}>
+                            <div style={{fontSize:"14px", marginTop: "5px", lineHeight: "1.0" }}>
+                               We're covering the race for President and Vice President, as well as the election for Illinois' 9th Congressional District Representative. 
                             </div>
                         </Accordion.Content>
                     </Accordion.Item>
@@ -27,7 +27,7 @@ const Introduction = () => {
                                 Illinois
                         </Accordion.Trigger>
                         <Accordion.Content>
-                            <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
+                            <div style={{ fontSize:"14px", marginTop: "5px", lineHeight: "1.0" }}>
                               The general election for the Illinois House of Representatives' 17th and 18th Districts is afoot.
                             </div>
                         </Accordion.Content>
@@ -38,7 +38,7 @@ const Introduction = () => {
                                 Cook County
                         </Accordion.Trigger>
                         <Accordion.Content>
-                            <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
+                            <div style={{ fontSize:"14px", marginTop: "5px", lineHeight: "1.0" }}>
                                Tune in to learn about the races for the Cook County State's Attorney, the Cook County Clerk, the Cook County Circuit Court Clerk, and the Water Reclamation District.
                             </div>
                         </Accordion.Content>
@@ -51,7 +51,7 @@ const Introduction = () => {
      
                         </Accordion.Trigger>
                         <Accordion.Content>
-                            <div style={{ marginTop: "5px", lineHeight: "1.0" }}>
+                            <div style={{ fontSize:"14px", marginTop: "5px", lineHeight: "1.0" }}>
                                 Voters are deciding on the following referenda: <br /><br />
                                 <b>Election Worker Protection Referendum:</b> "Should any candidate appearing on the Illinois ballot for federal, State, or local office be subject to civil penalties if the candidate interferes or attempts to interfere with an election worker's official duties?"<br /><br />
                                 <b>Property Tax Relief and Fairness Referendum:</b> "Should the Illinois Constitution be amended to create an additional 3% tax on income greater than $1,000,000 for the purpose of dedicating funds raised to property tax relief?"<br /><br />
