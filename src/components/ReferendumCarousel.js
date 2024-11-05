@@ -74,7 +74,7 @@ export default function ReferendumCarousel() {
         <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075" }}>
             {item.author}
         </Box>
-        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "none" }}>
+        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline" }}>
             Read more
         </Box>
     </Box>

@@ -62,7 +62,7 @@ export default function CookCountyCarousel() {
         width: isMobile ? "90vw" : "255px", 
         height: "450px", 
         margin: isMobile ? "10px auto" : "0 10px",
-        marginInline: isMobile? "0" :"auto", // Center the card
+        marginInline: isMobile? "0" :"auto",  
         padding: isMobile ? "$015" : "$075",
         padding: isMobile ? "$015" : "$075",
         boxShadow: isMobile ? "$150" : "$200",
@@ -74,9 +74,9 @@ export default function CookCountyCarousel() {
     <Box 
         css={{
             backgroundImage: `url('${item.imageUrl}')`,
-            backgroundSize: 'cover', // Ensures image covers container without distortion
-            backgroundPosition: 'center', // Center-aligns images
-            height: "40%", // Fixed height for image area
+            backgroundSize: 'cover',  
+            backgroundPosition: 'center',  
+            height: "40%",  
             width: "100%",
         }}
     />
@@ -90,7 +90,7 @@ export default function CookCountyCarousel() {
         <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075" }}>
             {item.author}
         </Box>
-        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "none" }}>
+        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline" }}>
             Read more
         </Box>
     </Box>
