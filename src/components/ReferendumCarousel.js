@@ -32,7 +32,7 @@ export default function ReferendumCarousel() {
             <Carousel.Root itemsPerPage={isMobile ? 1 : 3}>
                 <Carousel.Header>
                     <Carousel.HeaderContent>
-                        <Carousel.Title>Referenda Coverage</Carousel.Title>
+                        <Carousel.Title css={{color: "#501e4c"}}>Referenda Coverage</Carousel.Title>
                     </Carousel.HeaderContent>
                     <Carousel.HeaderActions>
                         <Carousel.PreviousButton />
@@ -65,16 +65,16 @@ export default function ReferendumCarousel() {
         }}
     />
     <Box css={{ padding: "$100" }}>  
-        <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070" }}>
+        <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070", color: "#501e4c" }}>
             {item.category}
         </Box>
-        <Box as="h2" css={{ fontSize: isMobile ? "$120" : "$150", fontFamily: "$headline", margin: "10px 0" }} id={`article-heading-${i}`}>
+        <Box as="h2" css={{ fontSize: isMobile ? "$120" : "$150", fontFamily: "$headline", margin: "10px 0", color: "#501e4c" }} id={`article-heading-${i}`}>
             {item.title}
         </Box>
-        <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075" }}>
+        <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", color: "#501e4c" }}>
             {item.author}
         </Box>
-        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline" }}>
+        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline", color: "#501e4c" }}>
             Read more
         </Box>
     </Box>
