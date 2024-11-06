@@ -60,7 +60,7 @@ export default function CookCountyCarousel() {
  <Card
     css={{
         width: isMobile ? "90vw" : "255px", 
-        height: "450px", 
+        height: isMobile? "300px":"450px", 
         margin: isMobile ? "10px auto" : "0 10px",
         marginInline: isMobile? "0" :"auto",  
         padding: isMobile ? "$015" : "$075",
@@ -76,7 +76,7 @@ export default function CookCountyCarousel() {
             backgroundImage: `url('${item.imageUrl}')`,
             backgroundSize: 'cover',  
             backgroundPosition: 'center',  
-            height: "40%",  
+            height: "100%",  
             width: "100%",
         }}
     />

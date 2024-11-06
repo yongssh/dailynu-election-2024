@@ -4,12 +4,27 @@ import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
 import "../App.css"
 const FederalElectionResults = () => {
     return (
-        <section className="dataviz-container">
+        <section className="dataviz-container ">
             <h2>Federal Elections </h2>
             
             <div id="federal">
             {/* <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/115532/17115.html" width="100%" frameborder="0" scrolling="no" marginheight="0" title="Interactive Embed"></iframe>
             <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/114037/17425.html" class="ap-embed overflow-hidden border-none" width="100%" scrolling="no" ></iframe> */}
+            <div className="dataviz">
+
+            <div classname="dataviz map">
+                <iframe title="Presidential Election Map" 
+                aria-label="Map" 
+                id="datawrapper-chart-vUSOK" 
+                src="https://datawrapper.dwcdn.net/vUSOK/3/" 
+                scrolling="no" 
+                frameborder="0" 
+                className="responsive-iframe-map"
+                data-external="1">
+                </iframe>
+            </div>
+            </div>
+            
             <div className="dataviz">
                 {/* <h3>Presidential Results</h3> */}
                 
