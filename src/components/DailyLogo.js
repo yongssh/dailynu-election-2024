@@ -20,7 +20,7 @@ const DailyLogo = ({ toggleSidebar, sidebarOpen }) => {
                     {sidebarOpen ? <ChevronLeft /> : <ChevronRight className="menu-icon"/>}
                 </button>
                 <a href="https://dailynorthwestern.com/category/elections2024/" className="coverage-button">
-                    Read Our Coverage
+                    Our 2024 Elections Coverage
                 </a>
               
             </div>

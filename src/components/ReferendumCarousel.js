@@ -5,6 +5,28 @@ import "../App.css";
 export default function ReferendumCarousel() {
     const items = [
         {
+            imageUrl: "article-photos/ELECTION-RACES-3.png",
+            category: "2024 Elections",
+            title: "Illinois voters approve advisory measure expanding coverage for IVF treatments",
+            author: "Samanta Habashy and Tia Bethke",
+            link: " https://dailynorthwestern.com/2024/11/06/city/illinois-voters-approve-advisory-measure-expanding-coverage-for-ivf-treatments/",
+        },
+        {
+            imageUrl: "article-photos/ELECTION-RACES-3.png",
+            category: "2024 Elections",
+            title: "Illinois voters cast ballots in favor of Property Tax Relief and Fairness Referendum",
+            author: "Cassie Sun and Claire Kirwan",
+            link: "https://dailynorthwestern.com/2024/11/06/city/illinois-voters-cast-ballots-in-favor-of-property-tax-relief-and-fairness-referendum/",
+        },
+        {
+            imageUrl: "article-photos/ELECTION-RACES-3.png",
+            category: "2024 Elections",
+            title: "Election worker protection referendum overwhelmingly favored by voters",
+            author: "Desiree Luo and Anavi Prakash",
+            link: "https://dailynorthwestern.com/2024/11/05/city/election-worker-protection-referendum-overwhelmingly-favored-by-voters/",
+        },
+
+        {
             imageUrl: "article-photos/MISINFORMATION-Isabella-Dumenigo-1200x675.jpg",
             category: "2024 Elections",
             title: "Political misinformation can decrease voter turnout in local elections, local experts warn",
@@ -42,7 +64,7 @@ export default function ReferendumCarousel() {
                 <Carousel.Content aria-live="polite">
                     {items.map((item, i) => (
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
-  <Card
+   <a href={item.link} style={{textDecoration:"none"}}><Card
     css={{
         width: isMobile ? "90vw" : "255px", 
         height: "350px",  
@@ -79,6 +101,7 @@ export default function ReferendumCarousel() {
         </Box>
     </Box>
 </Card>
+</a>
 
                         </Carousel.Item>
                     ))}

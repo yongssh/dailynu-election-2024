@@ -6,6 +6,56 @@
   export default function FederalElectionCarousel() {
       const items = [
         {
+            imageUrl: "article-photos/EverythingEvanston.png",
+            category: "2024 Elections",
+            title: "Everything Evanston: Voters prioritize reproductive rights, democracy in 2024 election",
+            author: "Edward Simon Cruz, Jack Baker, Matias Castañeda, Dalton Hanna, and Isaac Speyer",
+            link: "https://dailynorthwestern.com/2024/11/06/audio/everything-evanston-voters-prioritize-reproductive-rights-democracy-in-2024-election/",
+        },
+        {
+            imageUrl: "article-photos/watchparty.png",
+            category: "2024 Elections",
+            title: "Students and Evanston residents take in election results at watch parties",
+            author: "Ashley Lee, Kara Peeler, Clara Martinez, Jason Xing, Sid Sivaraman, and Sai Trivedi",
+            link: "https://dailynorthwestern.com/2024/11/06/video/election-2024-watch-parties/",
+        },
+       
+        {
+            imageUrl: "article-photos/trump.png",
+            category: "2024 Elections",
+            title: "Donald Trump poised to win presidential election",
+            author: "Nicole Markus and Lily Ogburn",
+            link: "https://dailynorthwestern.com/2024/11/06/city/donald-trump-poised-to-win-presidential-election/",
+        },
+        {
+            imageUrl: "article-photos/ELECTIONS06_ShunGraves_Bridge-1200x800.jpg",
+            category: "2024 Elections",
+            title: "Students anxious about election outcome as presidential results remain unclear",
+            author: "Nineth Kanieski Koso",
+            link: "https://dailynorthwestern.com/2024/11/06/campus/students-anxious-about-election-outcome-as-presidential-results-remain-unclear/",
+        },
+        {
+            imageUrl: "article-photos/ELECTIONS04_ShunGraves_Bridge-1200x800.jpg",
+            category: "2024 Elections",
+            title: "How Northwestern’s political clubs followed election night",
+            author: "Maya Heyman",
+            link: "https://dailynorthwestern.com/2024/11/05/campus/how-northwesterns-political-clubs-followed-election-night/",
+        },
+        {
+            imageUrl: "article-photos/ELECTIONS01_ShunGraves_Bridge-1200x800.jpg",
+            category: "2024 Elections",
+            title: "We talked to students about their feelings on Election Day. Here’s what they said.",
+            author: "Mintesinot Sturm",
+            link: "https://dailynorthwestern.com/2024/11/05/campus/we-talked-to-students-about-their-feelings-on-election-day-heres-what-they-said/",
+        },
+        {
+            imageUrl: "article-photos/IMG_1046-1200x755.jpg",
+            category: "2024 Elections",
+            title: "Evanston voters resoundingly support Vice President Kamala Harris in The Daily’s exit surveys",
+            author: "Isaiah Steinberg",
+            link: " https://dailynorthwestern.com/2024/11/05/lateststories/evanston-voters-resoundingly-support-vice-president-kamala-harris-in-the-dailys-exit-surveys/",
+        },
+        {
             imageUrl: "article-photos/JONES_Nineth_CMYK-1200x800.jpg",
             category: "2024 Elections",
             title: "CNN political analyst Van Jones talks life experiences, upcoming election at NU College Democrats event",
@@ -66,6 +116,7 @@
                 <Carousel.Content aria-live="polite">
                     {items.map((item, i) => (
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
+ <a href={item.link} style={{textDecoration:"none"}}>
  <Card
     css={{
         width: isMobile ? "90vw" : "255px", 
@@ -103,7 +154,7 @@
         </Box>
     </Box>
 </Card>
-
+</a>
 
 
                         </Carousel.Item>

@@ -1,4 +1,3 @@
-// Sidebar.js
 import React from 'react';
 import Introduction from './Introduction'; 
 import TwitterFeed from './TwitterFeed';  
@@ -14,7 +13,7 @@ const Sidebar = ({ onClose }) => {
         </button>
             <div className="introduction">
                 <Introduction />
-                <TwitterFeed />
+                {/* <TwitterFeed /> */}
             </div>
         </div>
     );

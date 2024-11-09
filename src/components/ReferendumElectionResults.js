@@ -16,7 +16,7 @@ const ReferendumElectionResults = () => {
                         src="https://datawrapper.dwcdn.net/qsRBU/1/" 
                         scrolling="no" 
                         frameBorder="0" 
-                        className="responsive-iframe"
+                        className="responsive-iframe referendum"
                         data-external="1"
                     ></iframe>
                 </div>
@@ -29,7 +29,7 @@ const ReferendumElectionResults = () => {
                         src="https://datawrapper.dwcdn.net/5sIIJ/1/" 
                         scrolling="no" 
                         frameBorder="0" 
-                        className="responsive-iframe"
+                        className="responsive-iframe referendum"
                         data-external="1"
                     ></iframe>
                 </div>
@@ -42,7 +42,7 @@ const ReferendumElectionResults = () => {
                         src="https://datawrapper.dwcdn.net/iUzIy/1/"
                         scrolling="no" 
                         frameBorder="0" 
-                        className="responsive-iframe"
+                        className="responsive-iframe referendum"
                         data-external="1"
                     ></iframe>
                 </div>

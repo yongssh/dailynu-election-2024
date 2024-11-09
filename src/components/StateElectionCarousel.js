@@ -5,6 +5,20 @@ import "../App.css";
 export default function StateElectionCarousel() {
     const items = [
         {
+            imageUrl: "article-photos/ELECTION-RACES-3.png",
+            category: "2024 Elections",
+            title: "Incumbent Jennifer Gong-Gershowitz projected to win fourth consecutive election for 17th district of the Illinois House of Representatives",
+            author: "Nineth Kanieski Koso",
+            link: "https://dailynorthwestern.com/2024/11/05/city/elections2024/incumbent-jennifer-gong-gershowitz-projected-to-win-fourth-consecutive-election-for-17th-district-of-the-illinois-house-of-representatives/",
+        },
+        {
+            imageUrl: "article-photos/ELECTION-RACES-3.png",
+            category: "2024 Elections",
+            title: "State House Majority Leader Robyn Gabel projected to win reelection",
+            author: "William Tong",
+            link: "https://dailynorthwestern.com/2024/11/05/city/elections2024/state-house-majority-leader-robyn-gabel-projected-to-win-reelection/",
+        },
+        {
             imageUrl: "article-photos/WhereToVote.jpg",
             category: "2024 Elections",
             title: "Where to vote in Evanston for the 2024 Election",
@@ -43,7 +57,7 @@ export default function StateElectionCarousel() {
                 <Carousel.Content aria-live="polite">
                     {items.map((item, i) => (
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
-  <Card
+   <a href={item.link} style={{textDecoration:"none"}}><Card
     css={{
         width: isMobile ? "90vw" : "255px",  
         height: "450px", 
@@ -80,6 +94,7 @@ export default function StateElectionCarousel() {
         </Box>
     </Box>
 </Card>
+</a>
 
 
 

@@ -5,7 +5,7 @@ import "../App.css";
 const Introduction = () => {
     return (
         <section style={{ padding: '10px', border:'2px solid #967893' }}>
-            <p>Welcome to The Daily Northwestern's coverage of the 2024 Elections. Explore our brief explainers of what we're reporting on tonight.</p>
+            <p>Welcome to <em>The Daily Northwestern</em>'s coverage of the 2024 Elections. Explore our brief explainers of what we're reporting on tonight.</p>
             <Box className="introduction-container"
             >
                 <Accordion.Root type="single" collapsible={true}>
