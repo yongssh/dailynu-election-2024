@@ -1,54 +1,31 @@
-import React from 'react';
-import { Accordion, Box } from '@washingtonpost/wpds-ui-kit';
-import "../App.css"; 
+import React from "react";
+import { Accordion, Box } from "@washingtonpost/wpds-ui-kit";
+import "../App.css";
+import DatawrapperEmbed from "./DatawrapperEmbed"; // import reusable component
 
 const ReferendumElectionResults = () => {
-    return (
-        <section className="dataviz-container referenda">
-            <h2>Referenda Results</h2>
-            
-            <div id="referenda">
-            <div className="dataviz referenda">
-                    <iframe 
-                        title="Election Worker Referendum" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-qsRBU" 
-                        src="https://datawrapper.dwcdn.net/qsRBU/1/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe referendum"
-                        data-external="1"
-                    ></iframe>
-                </div>
-    
-                <div className="dataviz referenda">
-                    <iframe 
-                        title="Property Tax Referendum" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-5sIIJ" 
-                        src="https://datawrapper.dwcdn.net/5sIIJ/1/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe referendum"
-                        data-external="1"
-                    ></iframe>
-                </div>
+  return (
+    <section className="dataviz-container ">
+      <h2 className="section-title">Referenda Results</h2>
 
-                <div className="dataviz referenda">
-                    <iframe 
-                        title="Assisted Reproductive Healthcare Referendum" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-iUzIy" 
-                        src="https://datawrapper.dwcdn.net/iUzIy/1/"
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe referendum"
-                        data-external="1"
-                    ></iframe>
-                </div>
-            </div>
-        </section>
-    );
+      <div id="referenda">
+          <DatawrapperEmbed
+            chartId="qsRBU"
+            title="Election Worker Referendum"
+          />
+    
+          <DatawrapperEmbed
+            chartId="5sIIJ"
+            title="Property Tax Referendum"
+          />
+
+          <DatawrapperEmbed
+            chartId="iUzIy"
+            title="Assisted Reproductive Healthcare Referendum"
+          />
+      </div>
+    </section>
+  );
 };
 
 export default ReferendumElectionResults;

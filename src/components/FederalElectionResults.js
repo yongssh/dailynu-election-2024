@@ -1,65 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
+import React, { useEffect } from "react";
+import "../App.css";
+import DatawrapperEmbed from "./DatawrapperEmbed";
 
-import "../App.css"
 const FederalElectionResults = () => {
-    return (
-        <section className="dataviz-container ">
-            <h2>Federal Elections </h2>
-            
-            <div id="federal">
-            {/* <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/115532/17115.html" width="100%" frameborder="0" scrolling="no" marginheight="0" title="Interactive Embed"></iframe>
-            <iframe src="https://interactives.ap.org/election-results/customers/layouts/organization-layouts/published/114037/17425.html" class="ap-embed overflow-hidden border-none" width="100%" scrolling="no" ></iframe> */}
-            <div className="dataviz">
+  useEffect(() => {
+    const handleResize = (event) => {
+      if (event.data.height && event.origin.includes("netlify.app")) {
+        const iframe = document.querySelector(".iframe-full");
+        if (iframe) {
+          iframe.style.height = event.data.height + "px";
+        }
+      }
+    };
+    window.addEventListener("message", handleResize);
+    return () => window.removeEventListener("message", handleResize);
+  }, []);
 
-            <div classname="dataviz map">
-                <iframe title="Presidential Election Map" 
-                aria-label="Map" 
-                id="datawrapper-chart-vUSOK" 
-                src="https://datawrapper.dwcdn.net/vUSOK/3/" 
-                scrolling="no" 
-                frameborder="0" 
-                className="responsive-iframe-map"
-                data-external="1">
-                </iframe>
-            </div>
-            </div>
-            
-            <div className="dataviz">
-                {/* <h3>Presidential Results</h3> */}
-                
-                <iframe 
-                title="US Presidential Election"
-                aria-label="Bar Chart" 
-                id="datawrapper-chart-JzSDb" 
-                src="https://datawrapper.dwcdn.net/JzSDb/2/" 
-                scrolling="no" 
-                frameborder="0" 
-                className="responsive-iframe"
-                 data-external="1"></iframe>           
-            </div>
-        
+  return (
+    <section className="dataviz-container federal">
+      <h2 className="section-title">Federal Elections</h2>
 
-            <div className="dataviz">
-                {/* <h3>Congressional Results</h3> */}
-            <iframe title="US House IL-9 Election" 
-            aria-label="Bar Chart" 
-            id="datawrapper-chart-RueGZ" 
-            src="https://datawrapper.dwcdn.net/RueGZ/6/" 
-            scrolling="no" 
-            frameborder="0" 
-            className="responsive-iframe"
-
-            data-external="1">
-            </iframe>
-
-
-           </div>
-           </div>
-          
-        </section>
-        
-    );
+      {/* <div id="federal" className="dataviz-container federal"> */}
+        <div className="federal-map-wrapper">
+        <iframe
+          title="Presidential Election Map"
+          src="https://creative-gelato-bfacf6.netlify.app"
+          frameBorder="0"
+          scrolling="no"
+          className="federal-map-iframe"
+        ></iframe>
+      </div>
+        <DatawrapperEmbed chartId="JzSDb" title="US Presidential Election" />
+        <DatawrapperEmbed chartId="RueGZ" title="US House IL-9 Election" />
+      {/* </div> */}
+    </section>
+  );
 };
 
 export default FederalElectionResults;

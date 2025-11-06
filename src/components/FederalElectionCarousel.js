@@ -1,10 +1,10 @@
 
-  import React, { useState, useEffect } from "react";
-  import { Carousel, Box, Card, Button, Icon } from "@washingtonpost/wpds-ui-kit";
-  import "../App.css";
-  
-  export default function FederalElectionCarousel() {
-      const items = [
+import React, { useState, useEffect } from "react";
+import { Carousel, Box, Card, Button, Icon } from "@washingtonpost/wpds-ui-kit";
+import "../App.css";
+
+export default function FederalElectionCarousel() {
+    const items = [
         {
             imageUrl: "article-photos/EverythingEvanston.png",
             category: "2024 Elections",
@@ -19,7 +19,7 @@
             author: "Ashley Lee, Kara Peeler, Clara Martinez, Jason Xing, Sid Sivaraman, and Sai Trivedi",
             link: "https://dailynorthwestern.com/2024/11/06/video/election-2024-watch-parties/",
         },
-       
+
         {
             imageUrl: "article-photos/trump.png",
             category: "2024 Elections",
@@ -91,9 +91,9 @@
             link: "https://dailynorthwestern.com/2024/10/24/city/lake-street-church-offers-meditative-strategies-to-alleviate-election-anxiety/",
         },
     ];
-  
 
-      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -102,11 +102,17 @@
     }, []);
 
     return (
-        <Box css={{ paddingInline: isMobile?"$5" : "$100", width: isMobile? "95vw":"71vw", margin: "0 auto", color: "#501e4c"}}>
+        <Box css={{ paddingInline: isMobile ? "$5" : "$100", width: isMobile ? "95vw" : "80vw", margin: "0 auto" }}>
             <Carousel.Root itemsPerPage={isMobile ? 1 : 3}>
-                <Carousel.Header>
+                <Carousel.Header css={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                }}>
                     <Carousel.HeaderContent>
-                        <Carousel.Title css={{color: "#501e4c"}}>Federal Coverage</Carousel.Title>
+                        <Carousel.Title css={{ color: "#FFF" }}>Federal Coverage</Carousel.Title>
                     </Carousel.HeaderContent>
                     <Carousel.HeaderActions>
                         <Carousel.PreviousButton />
@@ -116,45 +122,47 @@
                 <Carousel.Content aria-live="polite">
                     {items.map((item, i) => (
                         <Carousel.Item key={item.link} id={item.link} aria-labelledby={`article-heading-${i}`}>
- <a href={item.link} style={{textDecoration:"none"}}>
- <Card
-    css={{
-        width: isMobile ? "90vw" : "255px", 
-        height: "450px", 
-        margin: isMobile ? "10px auto" : "0 10px", 
-        marginInline: isMobile? "0" :"auto",  
-        padding: isMobile ? "$015" : "$075",
-        boxShadow: isMobile ? "$150" : "$200",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between"
-    }}
->
-    <Box 
-        css={{
-            backgroundImage: `url('${item.imageUrl}')`,
-            backgroundSize: 'cover',  
-            backgroundPosition: 'center',  
-            height: "180px",  
-            borderRadius: "$100", 
-        }}
-    />
-    <Box css={{ padding: "$100" }}> {/* Content container */}
-        <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070", color: "#501e4c"} }>
-            {item.category}
-        </Box>
-        <Box as="h2" css={{ fontSize: isMobile ? "$120" : "$150", fontFamily: "$headline", margin: "10px 0", color: "#501e4c"}} id={`article-heading-${i}`}>
-            {item.title}
-        </Box>
-        <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075",color: "#501e4c" }}>
-            {item.author}
-        </Box>
-        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline", color: "#501e4c"}}>
-            Read more
-        </Box>
-    </Box>
-</Card>
-</a>
+                            <a href={item.link} style={{ textDecoration: "none" }}>
+                                <Card
+                                    css={{
+                                        width: isMobile ? "90vw" : "255px",
+                                        height: "450px",
+                                        margin: isMobile ? "10px auto" : "0 10px",
+                                        marginInline: isMobile ? "0" : "auto",
+                                        padding: isMobile ? "$015" : "$075",
+                                        boxShadow: isMobile ? "$150" : "$200",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        borderRadius: "5px",
+
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <Box
+                                        css={{
+                                            backgroundImage: `url('${item.imageUrl}')`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center',
+                                            height: "180px",
+                                            borderRadius: "$100",
+                                        }}
+                                    />
+                                    <Box css={{ padding: "$100" }}> {/* Content container */}
+                                        <Box as="p" css={{ fontWeight: "bold", fontSize: isMobile ? "$060" : "$070", color: "#501e4c" }}>
+                                            {item.category}
+                                        </Box>
+                                        <Box as="h2" css={{ fontSize: isMobile ? "$120" : "$150", fontFamily: "$headline", margin: "10px 0", color: "#501e4c" }} id={`article-heading-${i}`}>
+                                            {item.title}
+                                        </Box>
+                                        <Box as="p" css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", color: "#501e4c" }}>
+                                            {item.author}
+                                        </Box>
+                                        <Box as="a" href={item.link} css={{ color: "$accessible", fontSize: isMobile ? "$065" : "$075", textDecoration: "underline", color: "#501e4c" }}>
+                                            Read more
+                                        </Box>
+                                    </Box>
+                                </Card>
+                            </a>
 
 
                         </Carousel.Item>

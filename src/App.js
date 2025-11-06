@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import DailyLogo from './components/DailyLogo';
+import NavBar from './components/NavBar';
 import FederalElectionResults from './components/FederalElectionResults';
 import FederalElectionCarousel from './components/FederalElectionCarousel';
 import HorizontalDivider from './components/HorizontalDivider';
@@ -16,53 +16,44 @@ import './App.css';
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    const toggleSidebar = () => {
-        setSidebarOpen(prevState => !prevState);
-    };
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
 
     return (
         <div className="App">
-            <div className="fixed-header">
-                <DailyLogo toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
-                <Header />
-            </div>
+                <Header toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
 
-            <div id="sidebar" className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
-                <Sidebar onClose={toggleSidebar} />
-            </div>
+                <NavBar /> 
 
             <div className="main-content">
                 <div className="content">
-                    {/* Federal Section */}
                     <div id="federal" className="election-section">
                         <FederalElectionResults />
                         <FederalElectionCarousel />
                     </div>
-                    <HorizontalDivider />
 
-                    {/* State Section */}
+       
                     <div id="illinois" className="election-section">
                         <StateElectionResults />
                         <StateElectionCarousel />
                     </div>
-                    <HorizontalDivider />
 
-                    {/* Cook County Section */}
-                    <div id="cook-county" className="election-section cook-county">
+             
+                    <div id="cook-county" className="election-section ">
                         <CookCountyElectionResults  />
                         <CookCountyCarousel />
                     </div>
                 
-                    <HorizontalDivider />
 
-                    {/* Referendum Section */}
                     <div id="referenda" className="election-section">
                         <ReferendumElectionResults />
                         <ReferendumCarousel />
                     </div>
                 </div>
                 <div className="footer"> 
-                    © The Daily Northwestern
+                    © The Daily Northwestern<br></br>
+                    Editor-in-Chief: Jacob Wendler<br></br>
+                    Web Developer: Yong-Yu Huang
                 </div>
             </div>
             

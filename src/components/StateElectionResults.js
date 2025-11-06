@@ -1,45 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import {Accordion, Box} from '@washingtonpost/wpds-ui-kit'
+import React from "react";
+import "../App.css";
+import DatawrapperEmbed from "./DatawrapperEmbed";
 
-import "../App.css"
 const StateElectionResults = () => {
-    return (
-        <section className="dataviz-container">
-            <h2>Illinois Elections </h2>
-                
-            
-            <div className="dataviz">
-                {/* <h3>Presidential Results</h3> */}
+  return (
+    <section className="dataviz-container state">
+      <h2 className="section-title">Illinois Elections</h2>
 
-                <iframe 
-                title="IL House 17 Election" 
-                aria-label="Bar Chart" 
-                id="datawrapper-chart-SmxdY" 
-                src="https://datawrapper.dwcdn.net/SmxdY/5/" 
-                scrolling="no" 
-                frameborder="0" 
-                className="responsive-iframe"
-                data-external="1">
-                </iframe>
-                </div>
-    
-            <div className="dataviz">
-                {/* <h3>Congressional Results</h3> */}
-                <iframe title="IL State House 18 Election" 
-                aria-label="Bar Chart" 
-                id="datawrapper-chart-LQziq"
-                src="https://datawrapper.dwcdn.net/LQziq/2/" 
-                scrolling="no" 
-                frameborder="0" 
-                className="responsive-iframe"
-                
-                data-external="1">
-                </iframe>
-           </div>
+      <div id="illinois">
+        {/* IL House 17 */}
+        <DatawrapperEmbed
+          chartId="SmxdY"
+          title="IL House 17 Election"
+        />
 
-        </section>
-        
-    );
+        {/* IL State House 18 */}
+        <DatawrapperEmbed
+          chartId="LQziq"
+          title="IL State House 18 Election"
+        />
+      </div>
+    </section>
+  );
 };
 
 export default StateElectionResults;

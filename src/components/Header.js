@@ -1,72 +1,53 @@
-import React from 'react';
-import { ChevronDown, BookmarkSolid } from "@washingtonpost/wpds-assets";
-import { NavigationMenu, Box, Icon, Button } from "@washingtonpost/wpds-ui-kit";
-import '../App.css';
+import React, { useEffect, useState } from "react";
+import Popup from "./Popup";
+import "../App.css";
+import { Info, BookmarkSolid } from "@washingtonpost/wpds-assets";
 
-export default function Header({ toggleSidebar }) {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    const headerHeight = document.querySelector('.fixed-header').offsetHeight;
+const Header = () => {
+  const [animate, setAnimate] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
 
-    if (section) {
-        window.scrollTo({
-            top: section.offsetTop - headerHeight,
-            behavior: 'smooth',
-        });
-    }
-};
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimate(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <Box className="header-container">
-    
-        <NavigationMenu.Root>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <div
-              role="button"
-              onClick={() => scrollToSection("federal")}
-              className="menu-trigger"
-            >Federal</div>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
+    <>
+      <div className={`header-container ${animate ? "animate" : ""}`}>
+        <a href="https://dailynorthwestern.com" className="daily-logo-link">
+          <img
+            src="THE DAILY LOGO WHITE.png"
+            alt="Daily Northwestern Logo"
+            className="daily-logo"
+          />
+        </a>
 
-      <NavigationMenu.Root>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <div
-              role="button"
-              onClick={() => scrollToSection("illinois")}
-              className="menu-trigger"
-            >Illinois</div>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
+        <h1 className="hed">2024 Elections</h1>
 
-      <NavigationMenu.Root>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <div
-              role="button"
-              onClick={() => scrollToSection("cook-county")}
-              className="menu-trigger"
-            >Cook County</div>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
+        <div className="centered-container">
+          <button className="action-button" onClick={() => setPopupOpen(true)}>
+            <Info className="icon-small" />
+            <span>What are we covering?</span>
+          </button>
+          <button
+            className="action-button"
+            onClick={() =>
+              window.open(
+                "https://dailynorthwestern.com/category/elections2024/",
+                "_blank"
+              )
+            }
+          >
+            <BookmarkSolid className="icon-small" />
+            <span>Read our Elections Coverage</span>
+          </button>
+        </div>
+      </div>
 
-      <NavigationMenu.Root>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <div
-              role="button"
-              onClick={() => scrollToSection("referenda")}
-              className="menu-trigger"
-            >Referenda</div>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu.Root>
-
-    </Box>
+      <Popup isOpen={popupOpen} onClose={() => setPopupOpen(false)} />
+    </>
   );
-}
+};
+
+export default Header;

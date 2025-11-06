@@ -1,81 +1,41 @@
-import React from 'react';
-import { Accordion, Box } from '@washingtonpost/wpds-ui-kit';
-
+import React from "react";
+import { Accordion, Box } from "@washingtonpost/wpds-ui-kit";
 import "../App.css";
+import DatawrapperEmbed from "./DatawrapperEmbed";
 
 const CookCountyElectionResults = () => {
-    return (
-        <section className="dataviz-container">
-            <h2>Cook County Elections</h2>
-            
-            <div id="cook-county">
-                <div className="dataviz">
-                    <iframe 
-                        title="IL State's Attorney Election" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-45p8N" 
-                        src="https://datawrapper.dwcdn.net/45p8N/2/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe" 
-                        data-external="1">
-                    </iframe>           
-                </div>
-    
-                <div className="dataviz">
-                    <iframe 
-                        title="IL's Cook County Clerk Election" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-HkPqH" 
-                        src="https://datawrapper.dwcdn.net/HkPqH/2/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe" 
-                        data-external="1">
-                    </iframe>
-                </div>
+  return (
+    <section className="dataviz-container">
+      <h2 className="section-title">Cook County Elections</h2>
 
-                <div className="dataviz">
-                    <iframe 
-                        title="Cook County Circuit Court Clerk Election" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-O4mY6" 
-                        src="https://datawrapper.dwcdn.net/O4mY6/1/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe" 
-                        data-external="1">
-                    </iframe>
-                </div>
+      <div id="cook-county">
+          <DatawrapperEmbed
+            chartId="45p8N"
+            title="IL State's Attorney Election"
+          />
 
-                <div className="dataviz">
-                    <iframe 
-                        title="Metropolitan Water Reclamation District Election (1/2)" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-d7sIr" 
-                        src="https://datawrapper.dwcdn.net/d7sIr/3/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe-water" 
-                        data-external="1">
-                    </iframe>
-                </div>
+          <DatawrapperEmbed
+            chartId="HkPqH"
+            title="IL's Cook County Clerk Election"
+          />
 
-                <div className="dataviz ">
-                    <iframe 
-                        title="Metropolitan Water Reclamation District Election (2/2)" 
-                        aria-label="Bar Chart" 
-                        id="datawrapper-chart-l7XDX" 
-                        src="https://datawrapper.dwcdn.net/l7XDX/2/" 
-                        scrolling="no" 
-                        frameBorder="0" 
-                        className="responsive-iframe" 
-                        data-external="1">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-    );
+          <DatawrapperEmbed
+            chartId="O4mY6"
+            title="Cook County Circuit Court Clerk Election"
+          />
+
+          <DatawrapperEmbed
+            chartId="d7sIr"
+            title="Metropolitan Water Reclamation District Election (1/2)"
+          />
+
+          <DatawrapperEmbed
+            chartId="l7XDX"
+            title="Metropolitan Water Reclamation District Election (2/2)"
+          />
+      </div>
+    </section>
+  );
 };
 
 export default CookCountyElectionResults;
